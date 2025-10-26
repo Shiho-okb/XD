@@ -1,0 +1,201 @@
+@use "global" as *;
+
+.c-btn02 {
+  color: $green;
+  display: inline-flex;
+  align-items: center;
+  font-size: myrem(14);
+  font-weight: 500;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.1em;
+  width: 100%;
+  border: solid 1px $green;
+  border-radius: myrem(25);
+  padding: myrem(15) myrem(20);
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.c-btn02 span {
+  display: inline-flex;
+  position: relative;
+}
+
+.c-btn02 span::before,
+.c-btn02 span::after {
+  content: "";
+  position: absolute;
+  background: $green;
+  border-radius: 0.1em;
+  rotate: 45deg;
+}
+
+.c-btn02 span::before {
+  width: 1px;
+  height: myrem(9);
+  translate: myrem(48) myrem(-1);
+}
+
+.c-btn02 span::after {
+  width: myrem(9);
+  height: 1px;
+  translate: myrem(44) myrem(-3);
+}
+
+.c-btn02--primary:hover {
+  @include mq(md) {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.c-btn02--primary:hover span::before,
+.c-btn02--primary:hover span::after {
+  @include mq(md) {
+    background: $white;
+  }
+}
+
+// ホバー時のアニメーション
+.c-btn02--primary::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    background: $green;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: right top;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+}
+
+.c-btn02--primary:hover::before {
+  @include mq(md) {
+    transform-origin: left top;
+    transform: scaleX(1);
+  }
+}
+
+// c-btn02--secondary
+.c-btn02--secondary {
+  color: $white;
+  background: $green;
+}
+
+.c-btn02--secondary span::before,
+.c-btn02--secondary span::after {
+  background: $white;
+}
+
+.c-btn02--secondary::before {
+  @include mq(md) {
+    background: $white;
+  }
+}
+
+.c-btn02--secondary::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    background: $green;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: right top;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    background: $white;
+  }
+}
+
+.c-btn02--secondary:hover {
+  @include mq(md) {
+    color: $green;
+  }
+}
+
+.c-btn02--secondary:hover span::before,
+.c-btn02--secondary:hover span::after {
+  @include mq(md) {
+    background: $green;
+  }
+}
+
+.c-btn02--secondary:hover::before {
+  @include mq(md) {
+    transform-origin: left top;
+    transform: scaleX(1);
+  }
+}
+
+// c-btn02--tertiary
+.c-btn02--tertiary {
+  color: $white;
+  background: $purple;
+  border: solid 1px $purple;
+}
+
+.c-btn02--tertiary span::before,
+.c-btn02--tertiary span::after {
+  background: $white;
+}
+
+.c-btn02--tertiary span::before {
+  translate: myrem(28) myrem(-1);
+  width: 1px;
+  height: myrem(9);
+}
+
+.c-btn02--tertiary span::after {
+  translate: myrem(24) myrem(-3);
+  width: myrem(9);
+  height: 1px;
+}
+
+.c-btn02--tertiary::before {
+  @include mq(md) {
+    position: absolute;
+    content: "";
+    background: $white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: right top;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+}
+
+.c-btn02--tertiary:hover {
+  @include mq(md) {
+    color: $purple;
+  }
+}
+
+.c-btn02--tertiary:hover span::before,
+.c-btn02--tertiary:hover span::after {
+  @include mq(md) {
+    background: $purple;
+  }
+}
+
+.c-btn02--tertiary:hover::before {
+  @include mq(md) {
+    transform-origin: left top;
+    transform: scaleX(1);
+  }
+}
+
+.p-btn {
+  width: myrem(240);
+}

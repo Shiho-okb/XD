@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.c-btn {
+  font-size: myrem(14);
+  font-weight: bold;
+  color: $purple;
+  line-height: calc(20 / 14);
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  gap: myrem(10);
+  align-items: center ;
+  width: 100%;
+  padding: myrem(5);
+  @include mq(md) {
+    font-size: myrem(16);
+    line-height: calc(24 / 16);
+    gap: myrem(7);
+  }
+}
+
+.c-btn span {
+  display: inline-flex;
+  background: $purple;
+  width: myrem(16);
+  height: myrem(16);
+  border-radius: 50%;
+  position: relative;
+  @include mq(md) {
+    width: myrem(18);
+    height: myrem(18);
+  }
+}
+
+.c-btn span::before,
+.c-btn span::after {
+  content: "";
+  position: absolute;
+  background: $white;
+  border-radius: 0.1em;
+  rotate: 45deg;
+}
+
+.c-btn span::before {
+  width: 1px;
+  height: myrem(5);
+  translate: myrem(8) myrem(7);
+  @include mq(md) {
+    translate: myrem(9) myrem(8);
+  }
+}
+
+.c-btn span::after {
+  width: myrem(5);
+  height: 1px;
+  translate: myrem(6) myrem(6);
+  @include mq(md) {
+    translate: myrem(7) myrem(7);
+  }
+}
+
+// c-btn--secondary
+.c-btn--secondary {
+  color: $green;
+  font-size: myrem(16);
+  line-height: calc(24 / 16);
+  gap: myrem(7);
+}
+
+.c-btn--secondary span {
+  background: $green;
+  width: myrem(18);
+  height: myrem(18);
+}
+
+.c-btn--secondary span::before {
+  translate: myrem(9) myrem(8);
+}
+
+.c-btn--secondary span::after {
+  translate: myrem(7) myrem(7);
+}
