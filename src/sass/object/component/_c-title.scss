@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.c-title {
+  font-size: myrem(28);
+  line-height: calc(40 / 28);
+  letter-spacing: .1em;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+  }
+}
+
+.c-title::after {
+  content: attr(data-en);
+  font-size: myrem(14);
+  line-height: calc(20 / 14);
+  letter-spacing: .1em;
+  font-weight: normal;
+  color: $green;
+  @include mq(md) {
+  }
+}
+
+.c-title--secondary::after {
+  color: $purple;
+}
+
+.p-title {
+  text-align: center;
+}

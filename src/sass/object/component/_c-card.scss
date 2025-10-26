@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.c-card {
+  font-size: myrem(14);
+  line-height: calc(20 / 14);
+  letter-spacing: .03em;
+  border-bottom: solid 1px $purple;
+  padding-top: myrem(6);
+  padding-bottom: myrem(10);
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: myrem(74) 1fr;
+    gap: myrem(16);
+    padding-top: myrem(17);
+  }
+}
+
+.c-card__wrapper {
+  display: grid;
+  grid-template-columns: myrem(60) 1fr;
+  gap: myrem(14);
+  @include mq(md) {
+    gap: myrem(11);
+  }
+}
+
+.c-card__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
