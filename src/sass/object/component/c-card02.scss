@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.c-card02 {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(20);
+  text-align: center;
+}
+
+.c-card02__image {}
+
+.c-card02__image img {
+  aspect-ratio: 345/230;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: myrem(15);
+}
+
+.c-card02__wrapper {}
+
+.c-card02__title {
+  font-size: myrem(22);
+  line-height: calc(32 / 22);
+  letter-spacing: .1em;
+  font-weight: normal;
+}
+
+.c-card02__text {
+  margin-top: myrem(11);
+  font-size: myrem(14);
+  line-height: calc(24 / 14);
+  letter-spacing: .03em;
+  text-align-last: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.c-card02__btn {
+  margin-top: myrem(9);
+  width: fit-content;
+  margin-left: auto;
+}
+
+.c-btn {}
+
+.c-btn--secondary {}
