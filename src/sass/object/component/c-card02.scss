@@ -7,8 +7,6 @@
   text-align: center;
 }
 
-.c-card02__image {}
-
 .c-card02__image img {
   aspect-ratio: 345/230;
   width: 100%;
@@ -16,8 +14,6 @@
   object-fit: cover;
   border-radius: myrem(15);
 }
-
-.c-card02__wrapper {}
 
 .c-card02__title {
   font-size: myrem(22);
@@ -43,7 +39,3 @@
   width: fit-content;
   margin-left: auto;
 }
-
-.c-btn {}
-
-.c-btn--secondary {}

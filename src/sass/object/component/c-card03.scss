@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.c-card03 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $green2;
+  aspect-ratio: 152/152;
+  border-radius: 50%;
+  max-width: 100%;
+  width: 46%;
+  position: relative;
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.p-card03 > .c-card03:not(:first-child)::before,
+.p-card03:not(:first-child) > .c-card03::before {
+  content: '';
+  position: absolute;
+  width: myrem(13);
+  height: myrem(25);
+  background: $green2;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  left: myrem(-15);
+  @include mq(md) {
+    width: myrem(16);
+    height: myrem(29);
+    left: myrem(-20);
+  }
+}
+
+.c-card03::after {
+  counter-increment: number 1;
+  content: counter(number, decimal-leading-zero);
+  font-size: myrem(16);
+  line-height: calc(24 / 16);
+  font-weight: bold;
+  letter-spacing: 0;
+  color: $green;
+  position: absolute;
+  background: $green3;
+  width: calc(42 / 152 * 100%);
+  height: calc(42 / 152 * 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.c-card03__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: myrem(6);
+  width: 100%;
+}
+
+.c-card03__image {
+  width: calc(60 / 152 *100%);
+  @include mq(md) {
+    width: calc(72 / 180 *100%);
+  }
+}
+
+.c-card03__image img{
+  aspect-ratio: 60/53;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  @include mq(md) {
+    aspect-ratio: 72/63;
+  }
+}
+
+.c-card03__text {
+  font-size: myrem(11);
+  line-height: calc(16 / 11);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-align: center;
+  color: $white;
+  @include mq(md) {
+    font-size: myrem(15);
+  }
+}
+
+.p-card03 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: myrem(20);
+  margin-right: myrem(15);
+  @include mq(md) {
+    display: contents;
+  }
+}
+
+.p-card03 + .p-card03 {
+  margin-top: myrem(30);
+  margin-right: initial;
+  margin-left: myrem(15);
+}
+
+.number {
+  counter-reset: number 0;
+  max-width: myrem(500);
+  margin-inline: auto;
+  @include mq(md) {
+    min-width: myrem(800);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(myrem(180), 1fr));
+    gap: myrem(26);
+  }
+}
