@@ -22,7 +22,9 @@
 }
 
 .c-card04__image {
-  width: calc(437 / 1000 * 100%);
+  @include mq(md) {
+    width: calc(437 / 1000 * 100%);
+  }
 }
 
 .c-card04__image img{
@@ -43,8 +45,6 @@
     width: calc(522 / 1000 * 100%);
   }
 }
-
-.c-card04__tag {}
 
 .c-card04__tag::before {
   counter-increment: number-m 1;
