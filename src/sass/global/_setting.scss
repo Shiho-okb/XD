@@ -9,7 +9,6 @@ $padding-pc: 25px;
 $padding-sp: 15px;
 
 // フォント
-// フォント
 $font-main: "Noto Sans JP", sans-serif;
 $font-sub: "League Script", cursive;
 $font-en: "Lato", sans-serif;
@@ -61,6 +60,7 @@ $mediaquerys: (
   line-height: $height / $pixels;
 }
 
+// フォント周りを一括設定
 @mixin f_around($pixels, $height: false, $weight: false, $spacing: false) {
   font-size: $pixels * 1px;
 
@@ -80,6 +80,7 @@ $mediaquerys: (
 // 呼び出し例
 // ＠include f_around(フォントサイズ18px, 行送り30 , 太さW6, トラッキング200)
 
+// z-index設定
 $z-index-values: (
   "modal": 1000,
   "dropdown": 900,

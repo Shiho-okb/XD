@@ -5,15 +5,15 @@ $breakpointInner: $innerWidth + strip-unit($padding-pc) * 2;
 
 // ルートフォント設定
 html {
-   // 376px ~ 767px
-   font-size: 100%;
+  // 376px ~ 767px
+  font-size: 100%;
 
-  // ~ 375px
+  // ~ 375px（リキッドレイアウト使用）
   @media (max-width: 375px) {
     font-size: vw(375, 16);
   }
 
-  // 768px ~ インナー幅＋余白
+  // 768px ~ インナー幅＋余白（リキッドレイアウト使用）
   @include mq(md) {
     font-size: vw(strip-unit($breakpointInner), 16);
   }

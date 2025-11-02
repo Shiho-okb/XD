@@ -29,10 +29,64 @@
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.min.css">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script defer src="./js/script.min.js"></script>
 </head>
 <body>
+  <!-- ヘッダー -->
+  <header class="p-header l-header js-header">
+    <!-- <div class="p-header__inner"> -->
+      <div class="p-header__wrapper">
+        <h1 class="p-header__logo js-header">
+          <a href="/" class="p-header__logo-image js-header">
+            <img src="./images/header/header_logo.png" alt="ASSIST DENTAL CLINIC のロゴ" width="" height="">
+          </a>
+        </h1>
+        <button class="p-header__hamburger js-hamburger" aria-label="ハンバーガーボタン">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="p-header__nav js-drawer">
+          <div class="p-header__nav-inner">
+            <div class="p-header__nav-inner2">
+              <ul class="p-header__nav-list">
+                <li class="p-header__nav-item p-header-nav-item">
+                  <a href="#" class="p-header-nav-item__link">新着情報</a>
+                </li>
+                <li class="p-header__nav-item">
+                  <a href="#" class="p-header-nav-item__link">診察内容</a>
+                </li>
+                <li class="p-header__nav-item">
+                  <a href="#" class="p-header-nav-item__link">治療の流れ</a>
+                </li>
+                <li class="p-header__nav-item p-header-nav-item js-accordion">
+                  <a href="./about.html" class="p-header-nav-item__link">当院について</a>
+                  <ul class="p-header__dropmenu p-header-dropmenu">
+                    <li class="p-header-dropmenu__item">
+                      <a href="./about.html#about" class="p-header-dropmenu__link"><span>院長挨拶</span></a>
+                    </li>
+                    <li class="p-header-dropmenu__item">
+                      <a href="./about.html#facility" class="p-header-dropmenu__link"><span>設備紹介</span></a>
+                    </li>
+                    <li class="p-header-dropmenu__item">
+                      <a href="./about.html#company" class="p-header-dropmenu__link"><span>会社概要</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="p-header__btnlist">
+                <li class="p-header__btnitem"><a href="tel:03-0000-0000" class="c-btn03"><span>03-0000-0000</span></a>
+                </li>
+                <li class="p-header__btnitem p-header__btnitem--reservation"><a href="./reservation.html" class="c-btn02">Web予約</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   <div class="l-inner">
     <p class="p-test">パーツページです</p>
 
