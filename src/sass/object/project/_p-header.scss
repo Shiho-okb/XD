@@ -3,23 +3,29 @@
 .p-header {
   width: 100%;
   height: myrem(60);
-  padding-left: myrem(15);
   background: $white;
   position: fixed;
   top: 0;
   z-index: 44;
   @include mq(md) {
     height: myrem(80);
-    padding: 0;
     transition: 0.4s;
   }
 }
 
+.p-header__inner {
+  padding-left: myrem(15);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
 .p-header__wrapper {
-  height: inherit;
+  height: myrem(60);
   display: flex;
   justify-content: space-between;
   @include mq(md) {
+    height: myrem(80);
     align-items: center;
     gap: myrem(15);
     padding-left: myrem(50);
@@ -39,6 +45,7 @@
 }
 
 .p-header__logo-image {
+  width: 100%;
   @include mq(md) {
     transition: 0.4s;
   }
@@ -55,7 +62,7 @@
 }
 
 .p-header__hamburger {
-  height: inherit;
+  height: myrem(60);
   width: myrem(50);
   padding: myrem(22.5) myrem(15);
   display: flex;
