@@ -49,36 +49,61 @@
         </button>
         <nav class="p-header__nav js-drawer">
           <div class="p-header__nav-inner">
-            <div class="p-header__nav-inner2">
+            <div class="p-header__nav-wrapper">
               <ul class="p-header__nav-list">
                 <li class="p-header__nav-item p-header-nav-item">
                   <a href="#" class="p-header-nav-item__link">新着情報</a>
                 </li>
-                <li class="p-header__nav-item">
+                <li class="p-header__nav-item p-header-nav-item">
                   <a href="#" class="p-header-nav-item__link">診察内容</a>
                 </li>
-                <li class="p-header__nav-item">
+                <li class="p-header__nav-item p-header-nav-item">
                   <a href="#" class="p-header-nav-item__link">治療の流れ</a>
                 </li>
-                <li class="p-header__nav-item p-header-nav-item js-accordion">
-                  <a href="./about.html" class="p-header-nav-item__link">当院について</a>
+                <li class="p-header__nav-item p-header-nav-item">
+                  <div class="p-header-nav-item__accordion">
+                    <a href="./about.html" class="p-header-nav-item__link ">当院について</a>
+                    <span class="p-header-nav-item__toggle js-accordion"></span>
+                  </div>
                   <ul class="p-header__dropmenu p-header-dropmenu">
                     <li class="p-header-dropmenu__item">
-                      <a href="./about.html#about" class="p-header-dropmenu__link"><span>院長挨拶</span></a>
+                      <a href="./about.html#about" class="p-header-dropmenu__link">
+                        <span>院長挨拶</span>
+                      </a>
                     </li>
                     <li class="p-header-dropmenu__item">
-                      <a href="./about.html#facility" class="p-header-dropmenu__link"><span>設備紹介</span></a>
+                      <a href="./about.html#facility" class="p-header-dropmenu__link">
+                        <span>設備紹介</span>
+                      </a>
                     </li>
                     <li class="p-header-dropmenu__item">
-                      <a href="./about.html#company" class="p-header-dropmenu__link"><span>会社概要</span></a>
+                      <a href="./about.html#company" class="p-header-dropmenu__link">
+                        <span>会社概要</span>
+                      </a>
                     </li>
                   </ul>
                 </li>
               </ul>
               <ul class="p-header__btnlist">
-                <li class="p-header__btnitem"><a href="tel:03-0000-0000" class="c-btn03"><span>03-0000-0000</span></a>
+                <li class="p-header__btnitem p-header__btnitem--phonenumber">
+                  <a href="tel:03-0000-0000">
+                    <div class="p-header__btnitem--phonenumber__text">
+                      <div class="p-header__btnitem--phonenumber__img">
+                        <img src="./images/header/icon_02.png" alt="電話のロゴ" width="15" height="21">
+                      </div>
+                      <span>03-0000-0000</span>
+                    </div>
+                    <span class="p-header__btnitem--phonenumber__text02">お気軽にお問い合わせください</span>
+                  </a>
                 </li>
-                <li class="p-header__btnitem p-header__btnitem--reservation"><a href="./reservation.html" class="c-btn02">Web予約</a></li>
+                <li class="p-header__btnitem p-header__btnitem--reservation">
+                  <a href="./reservation.html">
+                    <div class="p-header__btnitem--reservation__img">
+                      <img src="./images/header/icon_01.png" alt="カレンダーのロゴ" width="30" height="32">
+                    </div>
+                    Web予約
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
