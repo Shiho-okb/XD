@@ -68,7 +68,7 @@
   line-height: calc(27 / 19);
   letter-spacing: .04em;
   font-weight: normal;
-  border-bottom: solid 1px $green;
+  border-bottom: 1px solid $green;
   padding-bottom: myrem(13);
   @include mq(md) {
     font-size: myrem(24);

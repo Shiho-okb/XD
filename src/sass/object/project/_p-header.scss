@@ -98,6 +98,7 @@
   transform: translateY(myrem(-7)) rotate(-45deg);
 }
 
+// ナビゲーション
 .p-header__nav {
   display: none;
   position: fixed;
@@ -106,8 +107,8 @@
   background-color: $white;
   top: 0;
   left: 0;
-  padding: myrem(80) myrem(20) myrem(20);
   z-index: 43;
+  padding-block: myrem(98) myrem(20);
   @include mq(md) {
     display: flex;
     position: static;
@@ -123,19 +124,18 @@
 .p-header__nav-inner {
   height: 100%;
   overflow: auto;
+  padding-inline: myrem(30);
   @include mq(md) {
     height: inherit;
     overflow: initial;
   }
 }
 
-.p-header__nav-inner2 {
+.p-header__nav-wrapper {
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: inherit;
-  min-height: myrem(470);
-  text-align: center;
   @include mq(md) {
     min-height: initial;
     height: inherit;
@@ -146,10 +146,9 @@
 }
 
 .p-header__nav-list {
-  width: myrem(280);
-  margin-inline: auto;
+  width: myrem(315);
+  margin-top: myrem(19);
   order: 2;
-  margin-top: myrem(40);
   @include mq(md) {
     order: initial;
     display: flex;
@@ -162,6 +161,8 @@
 }
 
 .p-header__nav-item {
+  border-bottom: 1px solid rgba($green2, 0.4);
+  width: 100%;
   @include mq(md) {
     height: inherit;
     position: relative;
@@ -181,16 +182,16 @@
   }
 }
 
+.p-header__nav-item:last-child {
+  border-bottom: none;
+}
+
 .p-header-nav-item__link {
-  border-bottom: 1px solid #707070;
   display: block;
-  text-align: center;
-  padding: myrem(15);
-  font-size: myrem(16);
-  line-height: calc(32 / 16);
-  letter-spacing: 0.05em;
-  color: $black;
-  width: 100%;
+  padding: myrem(11) 0 myrem(13) myrem(10);
+  font-size: myrem(18);
+  line-height: calc(26 / 18);
+  letter-spacing: 0.04em;
   @include mq(md) {
     font-size: myrem(16);
     color: $black;
@@ -211,7 +212,43 @@
   }
 }
 
+// アコーディオン
+.p-header-nav-item__accordion {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba($green2, 0.4);
+}
+
+.p-header-nav-item__accordion .p-header-nav-item__link {
+  width: 100%;
+}
+
+.p-header-nav-item__toggle {
+  position: relative;
+  padding: myrem(20);
+}
+
+.p-header-nav-item__toggle::after{
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: solid 2px $green;
+  border-top: solid 2px $green;
+  height: myrem(13);
+  width: myrem(13);
+  right: myrem(12);
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+  transition: transform .3s;
+}
+
+.p-header-nav-item__toggle.open::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+// ドロップメニュー
 .p-header__dropmenu {
+  display: none;
   @include mq(md) {
     transform: scaleY(0);
     transform-origin: top center;
@@ -231,11 +268,17 @@
   width: 100%;
   @include mq(md) {
     width: initial;
-
   }
 }
 
 .p-header-dropmenu__link {
+  display: flex;
+  align-items: center;
+  gap: myrem(10);
+  padding: myrem(12) 0 myrem(12) myrem(20);
+  font-size: myrem(15);
+  line-height: calc(21 / 15);
+  letter-spacing: 0.04em;
   @include mq(md) {
     font-size: myrem(16);
     line-height: calc(34 / 16);
@@ -244,6 +287,14 @@
     padding-block: myrem(3);
     transition: .4s;
   }
+}
+
+.p-header-dropmenu__link::before {
+  content: "";
+  display: block;
+  width: myrem(16);
+  height: 1px;
+  background-color: $green;
 }
 
 .p-header-dropmenu__link:hover {
@@ -263,8 +314,8 @@
 .p-header__btnlist {
   display: flex;
   flex-direction: column;
-  gap: myrem(20);
-  width: myrem(280);
+  gap: myrem(10);
+  width: myrem(315);
   @include mq(md) {
     width: initial;
     flex-direction: row;
@@ -274,17 +325,101 @@
 }
 
 .p-header__btnitem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: myrem(10);
+  transition: all 0.3s;
   @include mq(md) {
     height: inherit;
     width: myrem(262);
   }
 }
 
+.p-header__btnitem:hover {
+  @include mq(md) {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
+
+// p-header__btnitem--phonenumber
+.p-header__btnitem--phonenumber {
+  color: #707070;
+  background: rgba($green2, 0.3);
+  order: 2;
+  @include mq(md) {
+    order: 1;
+  }
+}
+
+.p-header__btnitem--phonenumber a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: myrem(4) myrem(55) myrem(12) myrem(54);
+}
+
+.p-header__btnitem--phonenumber__text {
+  display: flex;
+  align-items: center;
+  font-size: myrem(26);
+  font-weight: 700;
+  line-height: calc(37 / 26);
+  letter-spacing: .027em;
+  gap: myrem(9);
+}
+
+.p-header__btnitem--phonenumber__img {
+  width: myrem(15);
+}
+
+.p-header__btnitem--phonenumber__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 15/21;
+  object-fit: cover;
+}
+
+.p-header__btnitem--phonenumber__text02 {
+  color: $black;
+  font-size: myrem(12);
+  line-height: calc(17 / 12);
+  letter-spacing: .004em;
+}
+
+
+// p-header__btnitem--reservation
 .p-header__btnitem--reservation {
+  color: $white;
+  background: $green2;
+  font-size: myrem(22);
+  font-weight: 500;
+  line-height: calc(32 / 22);
+  letter-spacing: .1em;
+  order: 1;
   @include mq(md) {
     height: inherit;
     width: myrem(120);
+    order: 2;
   }
+}
+
+.p-header__btnitem--reservation a {
+  display: flex;
+  gap: myrem(19.5);
+  padding: myrem(19) myrem(88) myrem(19) myrem(76);
+}
+
+.p-header__btnitem--reservation__img {
+  width: myrem(30);
+}
+
+.p-header__btnitem--reservation__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 30/32;
+  object-fit: cover;
 }
 
 /* ハンバーガーメニュー展開時、背景を固定 */

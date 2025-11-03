@@ -42,4 +42,13 @@ jQuery(function ($) {
     $("body").toggleClass("active");
     $('.js-drawer').fadeToggle();
   });
+
+  // アコーディオン
+  $(function () {
+    $(".js-accordion").on("click", function () {
+      const $target = $(this).closest(".p-header-nav-item").find(".p-header-dropmenu");
+      $target.stop(true, true).slideToggle(300).toggleClass("is-open");
+      $(this).toggleClass("open");
+    });
+  });
 });

@@ -9,7 +9,7 @@
   line-height: calc(20 / 14);
   letter-spacing: .1em;
   width: 100%;
-  border: solid 1px $green;
+  border: 1px solid $green;
   border-radius: myrem(25);
   padding: myrem(15) myrem(20);
   justify-content: center;
@@ -140,7 +140,7 @@
 .c-btn02--tertiary {
   color: $white;
   background: $purple;
-  border: solid 1px $purple;
+  border: 1px solid $purple;
 }
 
 .c-btn02--tertiary span::before,
