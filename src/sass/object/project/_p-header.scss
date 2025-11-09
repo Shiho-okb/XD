@@ -1,12 +1,8 @@
 @use "global" as *;
 
 .p-header {
-  width: 100%;
   height: myrem(60);
   background: $white;
-  position: fixed;
-  top: 0;
-  z-index: 44;
   @include mq(md) {
     height: myrem(80);
     transition: 0.4s;
@@ -16,7 +12,7 @@
 .p-header__inner {
   padding-left: myrem(15);
   @include mq(md) {
-    padding: 0;
+    padding-left: 0;
   }
 }
 
@@ -27,8 +23,6 @@
   @include mq(md) {
     height: myrem(80);
     align-items: center;
-    gap: myrem(15);
-    padding-left: myrem(50);
   }
 }
 
@@ -38,15 +32,17 @@
   width: calc(190 / 375 * 100%);
   z-index: 44;
   @include mq(md) {
-    width: calc(333 / 1400 * 100%);
+    width: calc(468 / 1400 * 100%);
     height: inherit;
     transition: 0.4s;
+    padding-inline: calc(102 / 1400 * 100vw) calc(33 / 1400 * 100vw);
   }
 }
 
 .p-header__logo-image {
   width: 100%;
   @include mq(md) {
+    width: calc(333 / 1400 * 100%);
     transition: 0.4s;
   }
 }
@@ -83,7 +79,6 @@
   border-radius: myrem(9);
   transform: translateY(0) rotate(0);
   transition: transform ease-in-out 0.3s;
-
 }
 
 .p-header__hamburger.is-active span:nth-child(1) {
@@ -113,7 +108,7 @@
     display: flex;
     position: static;
     height: inherit;
-    width: 100%;
+    width: calc(932 / 1400 * 100%);
     padding: 0;
     align-items: center;
     background-color: transparent;
@@ -121,27 +116,21 @@
   }
 }
 
-.p-header__nav-inner {
-  height: 100%;
-  overflow: auto;
-  padding-inline: myrem(30);
-  @include mq(md) {
-    height: inherit;
-    overflow: initial;
-  }
-}
-
 .p-header__nav-wrapper {
+  padding-inline: myrem(30);
   height: 100%;
   min-height: 100vh;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   @include mq(md) {
-    min-height: initial;
+    width: 100%;
+    padding: 0;
     height: inherit;
+    min-height: initial;
+    overflow: initial;
     flex-direction: row;
     justify-content: space-between;
-    gap: myrem(15);
   }
 }
 
@@ -152,10 +141,9 @@
   @include mq(md) {
     order: initial;
     display: flex;
-    width: initial;
-    justify-content: flex-start;
+    width: calc(550 / 932 * 100%);
     height: inherit;
-    margin-inline: initial;
+    justify-content: flex-start;
     margin-top: initial;
   }
 }
@@ -164,11 +152,13 @@
   border-bottom: 1px solid rgba($green2, 0.4);
   width: 100%;
   @include mq(md) {
+    border-bottom: none;
     height: inherit;
     position: relative;
     display: flex;
     align-items: center;
     transition: 0.4s;
+    width: auto;
   }
 }
 
@@ -193,20 +183,20 @@
   line-height: calc(26 / 18);
   letter-spacing: 0.04em;
   @include mq(md) {
-    font-size: myrem(16);
-    color: $black;
+    font-size: calc(16 / 1400 * 100vw);
+    line-height: calc(16 / 16);
+    letter-spacing: 0.1em;
     height: inherit;
     display: flex;
     align-items: center;
-    padding: myrem(10);
-    border-bottom: none;
+    padding: calc(28 / 1400 * 100vw) calc(26 / 1400 * 100vw);
     transition: 0.4s;
   }
 }
 
 .p-header-nav-item__link:hover {
   @include mq(md) {
-    color: red;
+    color: $green;
     font-weight: bold;
     opacity: 1;
   }
@@ -217,6 +207,10 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba($green2, 0.4);
+  @include mq(md) {
+    border-bottom: none;
+    height: inherit;
+  }
 }
 
 .p-header-nav-item__accordion .p-header-nav-item__link {
@@ -226,6 +220,9 @@
 .p-header-nav-item__toggle {
   position: relative;
   padding: myrem(20);
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .p-header-nav-item__toggle::after{
@@ -317,10 +314,11 @@
   gap: myrem(10);
   width: myrem(315);
   @include mq(md) {
-    width: initial;
+    width: calc(382 /932 * 100%);
     flex-direction: row;
     height: inherit;
     gap: initial;
+    height: 100%;
   }
 }
 
@@ -332,7 +330,7 @@
   transition: all 0.3s;
   @include mq(md) {
     height: inherit;
-    width: myrem(262);
+    border-radius: 0;
   }
 }
 
@@ -349,7 +347,10 @@
   background: rgba($green2, 0.3);
   order: 2;
   @include mq(md) {
+    width: calc(262 / 382 * 100%);
+    color: $black;
     order: 1;
+    height: inherit;
   }
 }
 
@@ -358,20 +359,48 @@
   flex-direction: column;
   align-items: center;
   padding: myrem(4) myrem(55) myrem(12) myrem(54);
+  @include mq(md) {
+    align-items: flex-end;
+    padding: calc(20 / 1400 * 100vw) calc(26 / 1400 * 100vw) calc(14 / 1400 * 100vw) calc(25 / 1400 * 100vw);
+  }
 }
 
-.p-header__btnitem--phonenumber__text {
+.p-header__btnitem--phonenumber__textbox {
   display: flex;
   align-items: center;
+  gap: myrem(9);
+  @include mq(md) {
+    align-items: baseline;
+    gap: 0;
+  }
+}
+
+.p-header__btnitem--phonenumber__text01 {
+  display: none;
+  @include mq(md) {
+    display: block;
+    font-size: calc(16 / 1400 * 100vw);
+    font-weight: bold;
+  }
+}
+
+.p-header__btnitem--phonenumber__text02 {
   font-size: myrem(26);
   font-weight: 700;
   line-height: calc(37 / 26);
   letter-spacing: .027em;
-  gap: myrem(9);
+  @include mq(md) {
+    font-size: calc(26 / 1400 * 100vw);
+    line-height: calc(26 / 26);
+    letter-spacing: 0;
+  }
 }
 
 .p-header__btnitem--phonenumber__img {
   width: myrem(15);
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .p-header__btnitem--phonenumber__img img {
@@ -381,11 +410,22 @@
   object-fit: cover;
 }
 
-.p-header__btnitem--phonenumber__text02 {
+.p-header__btnitem--phonenumber__text03 {
   color: $black;
   font-size: myrem(12);
   line-height: calc(17 / 12);
   letter-spacing: .004em;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-header__btnitem--phonenumber__text04 {
+  display: none;
+  @include mq(md) {
+    display: block;
+    font-size: calc(12 / 1400 * 100vw);
+  }
 }
 
 
@@ -393,26 +433,38 @@
 .p-header__btnitem--reservation {
   color: $white;
   background: $green2;
-  font-size: myrem(22);
-  font-weight: 500;
-  line-height: calc(32 / 22);
-  letter-spacing: .1em;
   order: 1;
   @include mq(md) {
+    background: $green;
     height: inherit;
-    width: myrem(120);
+    width: calc(120 / 382 * 100%);
     order: 2;
   }
 }
 
 .p-header__btnitem--reservation a {
   display: flex;
+  font-size: myrem(22);
+  font-weight: 500;
+  line-height: calc(32 / 22);
+  letter-spacing: .1em;
   gap: myrem(19.5);
   padding: myrem(19) myrem(88) myrem(19) myrem(76);
+  @include mq(md) {
+    font-size: calc(18 / 1400 * 100vw);
+    font-weight: 700;
+    line-height: calc(18 / 18);
+    padding: calc(28 / 1400 * 100vw) calc(16 / 1400 * 100vw) calc(28 / 1400 * 100vw) calc(18 / 1400 * 100vw);
+    align-items: center;
+    height: inherit;
+  }
 }
 
 .p-header__btnitem--reservation__img {
   width: myrem(30);
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .p-header__btnitem--reservation__img img {
