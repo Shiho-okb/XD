@@ -93,7 +93,10 @@
   transform: translateY(myrem(-7)) rotate(-45deg);
 }
 
-// ナビゲーション
+
+/*-------------------------------------------
+ナビゲーション
+-------------------------------------------*/
 .p-header__nav {
   display: none;
   position: fixed;
@@ -202,7 +205,10 @@
   }
 }
 
-// アコーディオン
+
+/*-------------------------------------------
+アコーディオン
+-------------------------------------------*/
 .p-header-nav-item__accordion {
   display: flex;
   justify-content: space-between;
@@ -243,7 +249,10 @@
   transform: translateY(-50%) rotate(-45deg);
 }
 
-// ドロップメニュー
+
+/*-------------------------------------------
+ドロップメニュー
+-------------------------------------------*/
 .p-header__dropmenu {
   display: none;
   @include mq(md) {
@@ -265,9 +274,8 @@
 .p-header-dropmenu__item {
   position: relative;
   width: 100%;
-  @include mq(md) {
-  }
 }
+
 .p-header-dropmenu__item:not(:last-child) {
   border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 }
@@ -350,7 +358,10 @@
   }
 }
 
-// p-header__btnitem--phonenumber
+
+/*-------------------------------------------
+電話番号ボタン
+-------------------------------------------*/
 .p-header__btnitem--phonenumber {
   color: #707070;
   background: rgba($green2, 0.3);
@@ -438,7 +449,9 @@
 }
 
 
-// p-header__btnitem--reservation
+/*-------------------------------------------
+Web予約ボタン
+-------------------------------------------*/
 .p-header__btnitem--reservation {
   color: $white;
   background: $green2;
@@ -483,7 +496,10 @@
   object-fit: cover;
 }
 
-/* ハンバーガーメニュー展開時、背景を固定 */
+
+/*-------------------------------------------
+ハンバーガーメニュー展開時、背景を固定
+-------------------------------------------*/
 body.active {
   height: 100%;
   overflow: hidden;
