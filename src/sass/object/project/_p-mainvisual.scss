@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-mainvisual {
+  position: relative;
+}
+
+.p-mainvisual__inner {
+  padding-left: myrem(15);
+}
+
+.p-mainvisual-title {
+  font-size: myrem(18);
+  line-height: calc(43 / 18);
+  letter-spacing: 0;
+  color: $green;
+  font-family: $font-sub;
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  left: 5%;
+  transform: rotate(-7deg);
+}
+
+.p-mainvisual__image {
+  width: myrem(314);
+  margin-right: 0;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.p-mainvisual__image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 314 / 232;
+  object-fit: cover;
+}
+
+.p-mainvisual__textbox {
+  position: absolute;
+  z-index: 2;
+  top: myrem(212);
+}
+
+.p-mainvisual__text01 {
+  font-size: myrem(22);
+  line-height: calc(43 / 22);
+  letter-spacing: 0.1em;
+  color: $white;
+  display: block;
+}
+
+.p-mainvisual__text01 span {
+  background-color: $green2;
+  padding: myrem(0) myrem(20) myrem(0) myrem(5);
+  display: inline-block;
+}
+
+.p-mainvisual__text01 span:not(:first-child) {
+  margin-top: myrem(4);
+}
+
+.p-mainvisual__text02 {
+  font-size: myrem(15);
+  line-height: calc(21 / 15);
+  letter-spacing: 0.035em;
+  margin-top: myrem(11);
+}
