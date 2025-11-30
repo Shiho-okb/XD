@@ -32,10 +32,10 @@
   width: calc(190 / 375 * 100%);
   z-index: 44;
   @include mq(md) {
-    width: calc(468 / 1400 * 100%);
+    width: calc(435 / 1400 * 100%);
     height: inherit;
     transition: 0.4s;
-    padding-inline: calc(102 / 1400 * 100vw) calc(33 / 1400 * 100vw);
+    padding-inline: calc(102 / 1400 * 100vw) 0;
   }
 }
 
@@ -111,7 +111,7 @@
     display: flex;
     position: static;
     height: inherit;
-    width: calc(932 / 1400 * 100%);
+    width: calc(965 / 1400 * 100%);
     padding: 0;
     align-items: center;
     background-color: transparent;
@@ -133,7 +133,6 @@
     min-height: initial;
     overflow: initial;
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -144,9 +143,9 @@
   @include mq(md) {
     order: initial;
     display: flex;
-    width: calc(550 / 932 * 100%);
+    width: calc(583 / 965 * 100%);
     height: inherit;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-top: initial;
   }
 }
@@ -289,7 +288,7 @@
   line-height: calc(21 / 15);
   letter-spacing: 0.04em;
   @include mq(md) {
-    font-size: myrem(16);
+    font-size: calc(16 / 1400 * 100vw);
     line-height: calc(24 / 16);
     letter-spacing: .1em;
     padding-inline: 0;
@@ -331,7 +330,7 @@
   gap: myrem(10);
   width: myrem(315);
   @include mq(md) {
-    width: calc(382 /932 * 100%);
+    width: calc(382 /965 * 100%);
     flex-direction: row;
     height: inherit;
     gap: initial;
@@ -381,7 +380,7 @@
   padding: myrem(4) myrem(55) myrem(12) myrem(54);
   @include mq(md) {
     align-items: flex-end;
-    padding: calc(20 / 1400 * 100vw) calc(26 / 1400 * 100vw) calc(14 / 1400 * 100vw) calc(25 / 1400 * 100vw);
+    padding: calc(20 / 1400 * 100vw) calc(25 / 1400 * 100vw) calc(11 / 1400 * 100vw) calc(25 / 1400 * 100vw);
   }
 }
 
@@ -410,7 +409,7 @@
   line-height: calc(37 / 26);
   letter-spacing: .027em;
   @include mq(md) {
-    font-size: calc(26 / 1400 * 100vw);
+    font-size: clamp(14px, 1.8vw, 26px);
     line-height: calc(26 / 26);
     letter-spacing: 0;
   }
@@ -473,7 +472,7 @@ Web予約ボタン
   gap: myrem(19.5);
   padding: myrem(19) myrem(88) myrem(19) myrem(76);
   @include mq(md) {
-    font-size: calc(18 / 1400 * 100vw);
+    font-size: clamp(10px, 1.2vw, 18px);
     font-weight: 700;
     line-height: calc(18 / 18);
     padding: calc(28 / 1400 * 100vw) calc(16 / 1400 * 100vw) calc(28 / 1400 * 100vw) calc(18 / 1400 * 100vw);
