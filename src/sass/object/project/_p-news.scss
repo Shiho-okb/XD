@@ -1,5 +1,13 @@
 @use "global" as *;
 
+.p-news__wrapper {
+  @include mq(md) {
+    display: flex;
+    justify-content: flex-end;
+    gap: myrem(37);
+  }
+}
+
 .p-news {
   position: relative;
   overflow: visible;
@@ -15,13 +23,29 @@
   height: 100%;
   background: url(/images/news/news_01.png) no-repeat center center/cover;
   opacity: 0.4;
+  @include mq(md) {
+    top:myrem(-128);
+  }
+}
+
+.p-news__title {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .p-news__cards {
   margin-top: myrem(14);
+  @include mq(md) {
+    margin-top: myrem(0);
+    width: calc(623 / 1000 * 100%);
+  }
 }
 
 .p-news .c-btn {
   justify-content: flex-end;
   margin-top: myrem(3);
+  @include mq(md) {
+    margin-top: myrem(15);
+    margin-left: myrem(5);
+  }
 }

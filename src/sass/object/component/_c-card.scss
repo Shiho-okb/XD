@@ -13,7 +13,8 @@
     display: grid;
     grid-template-columns: myrem(74) 1fr;
     gap: myrem(16);
-    padding-top: myrem(17);
+    padding-top: myrem(16);
+  padding-bottom: myrem(9);
   }
 }
 

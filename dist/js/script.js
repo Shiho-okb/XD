@@ -54,16 +54,24 @@ jQuery(function ($) {
 
   // フェードイン
   $(function () {
-    function checkFadeIn() {
-      const wHeight = $(window).height();
-      const wScroll = $(window).scrollTop();
-      $(".js-mainvisual__image, .js-mainvisual__textbox, .js-mainvisual-title").each(function () {
-        const bPosition = $(this).offset().top;
-        if (wScroll > bPosition - wHeight + 200) {
-          $(this).addClass("fadeIn");
-        }
-      });
-    }
+  function checkFadeIn() {
+    const wHeight = $(window).height();
+    const wScroll = $(window).scrollTop();
+
+    const targets = [
+      ".js-mainvisual__image",
+      ".js-mainvisual__textbox",
+      ".js-mainvisual-title",
+      ".js-title"
+    ].join(", ");
+
+    $(targets).each(function () {
+      const bPosition = $(this).offset().top;
+      if (wScroll > bPosition - wHeight + 200) {
+        $(this).addClass("fadeIn");
+      }
+    });
+  }
 
     // スクロール時
     $(window).scroll(function () {

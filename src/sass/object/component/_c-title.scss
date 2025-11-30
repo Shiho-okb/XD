@@ -8,6 +8,8 @@
   display: flex;
   flex-direction: column;
   @include mq(md) {
+    font-size: myrem(32);
+    line-height: calc(46 / 32);
   }
 }
 
@@ -19,6 +21,8 @@
   font-weight: normal;
   color: $green;
   @include mq(md) {
+    font-size: myrem(18);
+    line-height: calc(26 / 18);
   }
 }
 

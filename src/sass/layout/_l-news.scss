@@ -3,5 +3,6 @@
 .l-news {
   padding-block: myrem(140) myrem(192);
   @include mq(md) {
+    padding-block: myrem(55) myrem(187);
   }
 }
