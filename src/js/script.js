@@ -51,4 +51,26 @@ jQuery(function ($) {
       $(this).toggleClass("open");
     });
   });
-});
+
+  // フェードイン
+  $(function () {
+    function checkFadeIn() {
+      const wHeight = $(window).height();
+      const wScroll = $(window).scrollTop();
+      $(".js-mainvisual__image, .js-mainvisual__textbox, .js-mainvisual-title").each(function () {
+        const bPosition = $(this).offset().top;
+        if (wScroll > bPosition - wHeight + 200) {
+          $(this).addClass("fadeIn");
+        }
+      });
+    }
+
+    // スクロール時
+    $(window).scroll(function () {
+      checkFadeIn();
+    });
+
+    // ページ読み込み時にも判定
+    checkFadeIn();
+    });
+  });

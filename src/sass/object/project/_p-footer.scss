@@ -67,7 +67,7 @@
 
 .p-footer__nav-list > li:last-child > a {
   padding-block: myrem(25) myrem(5);
-  @include mq(xl) {
+  @include mq(md) {
     padding-block: myrem(10) myrem(5);
   }
 }
