@@ -10,7 +10,7 @@
   gap: myrem(10);
   align-items: center ;
   width: 100%;
-  padding: myrem(5);
+  padding: myrem(5) 0 myrem(5) myrem(5);
   @include mq(md) {
     font-size: myrem(16);
     line-height: calc(24 / 16);
