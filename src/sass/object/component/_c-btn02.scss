@@ -2,13 +2,14 @@
 
 .c-btn02 {
   color: $green;
+  background-color: $white;
   display: inline-flex;
   align-items: center;
   font-size: myrem(14);
   font-weight: 500;
   line-height: calc(20 / 14);
   letter-spacing: .1em;
-  width: 100%;
+  width: myrem(240);
   border: 1px solid $green;
   border-radius: myrem(25);
   padding: myrem(15) myrem(20);
@@ -16,6 +17,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
+  z-index: 0;
 }
 
 .c-btn02 span {

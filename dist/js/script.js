@@ -59,9 +59,8 @@ jQuery(function ($) {
     const wScroll = $(window).scrollTop();
 
     const targets = [
-      ".js-mainvisual__image",
+      ".js-image",
       ".js-mainvisual__textbox",
-      ".js-mainvisual-title",
       ".js-title"
     ].join(", ");
 

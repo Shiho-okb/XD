@@ -19,7 +19,7 @@ html {
   }
 
   // インナー幅＋余白 ~
-  @media ( min-width: $breakpointInner ) {
+  @media (min-width: $breakpointInner) {
     font-size: 100%;
   }
 }

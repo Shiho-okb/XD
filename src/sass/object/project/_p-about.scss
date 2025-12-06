@@ -1,0 +1,119 @@
+@use "global" as *;
+
+.p-about {
+  @include mq(md) {
+    position: relative;
+    overflow: visible;
+  }
+}
+
+.p-about::before {
+  @include mq(md) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: myrem(249);
+    right: 0;
+    width: calc(895 / 1400 * 100%);
+    aspect-ratio: 895 / 454;
+    background: url(/images/about/about_03.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+}
+
+.p-about__wrapper {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-about__imagebox {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  @include mq(md) {
+    width: calc(460 / 1000 * 100%);
+  }
+}
+
+.p-about__image01 {
+  width: myrem(208);
+  position: relative;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translate(-100px, 0);
+  @include mq(md) {
+    width: myrem(353);
+  }
+}
+
+.p-about__image01 img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 208 / 245;
+  object-fit: cover;
+  overflow: hidden;
+  @include mq(md) {
+    aspect-ratio: 353 / 414;
+    filter: drop-shadow(1px 3px 15px rgba(51, 114, 142, 0.29));
+  }
+}
+
+.p-about__image02 {
+  width: myrem(202);
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: myrem(153);
+  right: 0;
+  opacity: 0;
+  transform: translateX(100px);
+  @include mq(md) {
+    width: myrem(344);
+    top: myrem(375);
+  }
+}
+
+.p-about__image02 img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 202 / 145;
+  object-fit: cover;
+  overflow: hidden;
+  @include mq(md) {
+    aspect-ratio: 344 / 246;
+    filter: drop-shadow(1px 3px 15px rgba(51, 114, 142, 0.29));
+  }
+}
+
+.p-about__contents {
+  margin-top: myrem(83);
+  @include mq(md) {
+    margin-top: myrem(92);
+    width: calc(500 / 1000 * 100%);
+  }
+}
+
+.p-about__text {
+  font-size: myrem(14);
+  line-height: calc(30 / 14);
+  letter-spacing: .03em;
+  margin-top: myrem(25);
+  @include mq(md) {
+    margin-top: myrem(36);
+  }
+}
+
+.p-about__btn {
+  width: myrem(240);
+  margin: myrem(35) auto 0;
+  @include mq(md) {
+    margin: myrem(55) 0 0 auto;
+  }
+}
