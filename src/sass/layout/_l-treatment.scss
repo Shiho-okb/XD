@@ -1,0 +1,7 @@
+@use 'global' as *;
+
+.l-treatment {
+  padding-top: myrem(68);
+  @include mq(md) {
+  }
+}

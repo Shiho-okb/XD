@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.p-treatment {
+  position: relative;
+  overflow: visible;
+}
+
+.p-treatment::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 375 / 700;
+  background: url(/images/treatment/treatment_05.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  @include mq(md) {
+    aspect-ratio: 1400 / 400;
+    background: url(/images/treatment/treatment_05PC.png);
+  }
+}
+
+.p-treatment__wrapper {
+  @include mq(md) {
+    display: flex;
+    gap: myrem(26);
+    margin-top: myrem(40);
+  }
+}
+
+.p-treatment .c-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.p-treatment .c-card02:first-of-type {
+  margin-top: myrem(30);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-treatment .c-card02 {
+  margin-top: myrem(25);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-treatment__btn {
+  width: myrem(240);
+  margin: myrem(35) auto 0;
+  @include mq(md) {
+    margin: myrem(55) auto 0;
+  }
+}

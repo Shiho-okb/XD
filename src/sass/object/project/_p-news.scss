@@ -17,7 +17,7 @@
   z-index: -1;
   @include mq(md) {
     aspect-ratio: 1400 / 423;
-    background: url(/images/news/news_02.png) no-repeat center center/cover;
+    background: url(/images/news/news_01PC.png) no-repeat center center/cover;
   }
 }
 
@@ -29,7 +29,7 @@
   }
 }
 
-.p-news__title {
+.p-news .c-title {
   opacity: 0;
   transform: translateY(100px);
 }
@@ -48,5 +48,6 @@
   @include mq(md) {
     margin-top: myrem(15);
     margin-left: myrem(5);
+    padding: myrem(5);
   }
 }

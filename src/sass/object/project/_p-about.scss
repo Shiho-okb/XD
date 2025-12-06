@@ -48,8 +48,11 @@
   top: 0;
   opacity: 0;
   transform: translate(-100px, 0);
+  overflow: hidden;
+  border-radius: myrem(15);
   @include mq(md) {
     width: myrem(353);
+    border-radius: myrem(30);
   }
 }
 
@@ -58,7 +61,6 @@
   height: auto;
   aspect-ratio: 208 / 245;
   object-fit: cover;
-  overflow: hidden;
   @include mq(md) {
     aspect-ratio: 353 / 414;
     filter: drop-shadow(1px 3px 15px rgba(51, 114, 142, 0.29));
@@ -74,9 +76,12 @@
   right: 0;
   opacity: 0;
   transform: translateX(100px);
+  overflow: hidden;
+  border-radius: myrem(15);
   @include mq(md) {
     width: myrem(344);
     top: myrem(375);
+    border-radius: myrem(30);
   }
 }
 
@@ -85,7 +90,6 @@
   height: auto;
   aspect-ratio: 202 / 145;
   object-fit: cover;
-  overflow: hidden;
   @include mq(md) {
     aspect-ratio: 344 / 246;
     filter: drop-shadow(1px 3px 15px rgba(51, 114, 142, 0.29));
@@ -98,6 +102,11 @@
     margin-top: myrem(92);
     width: calc(500 / 1000 * 100%);
   }
+}
+
+.p-about .c-title {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .p-about__text {

@@ -13,6 +13,10 @@
   height: 100%;
   object-fit: cover;
   border-radius: myrem(15);
+  @include mq(md) {
+    aspect-ratio: 230/300;
+    border-radius: myrem(30);
+  }
 }
 
 .c-card02__title {
@@ -32,10 +36,13 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  @include mq(md) {
+    -webkit-line-clamp: 3;
+  }
 }
 
 .c-card02__btn {
-  margin-top: myrem(9);
+  margin-top: myrem(5);
   width: fit-content;
   margin-left: auto;
 }

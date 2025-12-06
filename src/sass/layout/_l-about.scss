@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .l-about {
-  margin-top: myrem(63);
+  margin-block: myrem(63) myrem(70);
   @include mq(md) {
     margin-block: myrem(57) myrem(245);
   }
