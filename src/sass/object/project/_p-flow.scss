@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.p-flow .c-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.p-flow__cards {
+  counter-reset: number 0;
+    max-width: myrem(500);
+    margin-inline: auto;
+    margin-top: myrem(28);
+    @include mq(md) {
+      min-width: myrem(800);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(myrem(180), 1fr));
+      gap: myrem(26);
+    }
+}

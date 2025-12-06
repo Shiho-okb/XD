@@ -60,18 +60,63 @@
   width: 100%;
 }
 
-.c-card03__image {
+.c-card03__image01 {
   width: calc(60 / 152 *100%);
   @include mq(md) {
     width: calc(72 / 180 *100%);
   }
 }
 
-.c-card03__image img{
-  aspect-ratio: 60/53;
+.c-card03__image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.c-card03__image01 img {
+  aspect-ratio: 60/53;
+  @include mq(md) {
+    aspect-ratio: 72/63;
+  }
+}
+
+.c-card03__image02 {
+  width: calc(66 / 152 *100%);
+  @include mq(md) {
+    width: calc(72 / 180 *100%);
+  }
+}
+
+.c-card03__image02 img {
+  aspect-ratio: 66/50;
+  @include mq(md) {
+    aspect-ratio: 72/63;
+  }
+}
+
+.c-card03__image03 {
+  width: calc(47 / 152 *100%);
+  @include mq(md) {
+    width: calc(72 / 180 *100%);
+  }
+}
+
+.c-card03__image03 img {
+  aspect-ratio: 47/63;
+  @include mq(md) {
+    aspect-ratio: 72/63;
+  }
+}
+
+.c-card03__image04 {
+  width: calc(52 / 152 *100%);
+  @include mq(md) {
+    width: calc(72 / 180 *100%);
+  }
+}
+
+.c-card03__image04 img {
+  aspect-ratio: 52/54;
   @include mq(md) {
     aspect-ratio: 72/63;
   }
@@ -103,16 +148,4 @@
   margin-top: myrem(30);
   margin-right: initial;
   margin-left: myrem(15);
-}
-
-.number {
-  counter-reset: number 0;
-  max-width: myrem(500);
-  margin-inline: auto;
-  @include mq(md) {
-    min-width: myrem(800);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(myrem(180), 1fr));
-    gap: myrem(26);
-  }
 }
