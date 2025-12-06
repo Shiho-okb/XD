@@ -13,6 +13,7 @@
   position: relative;
   @include mq(md) {
     width: 100%;
+    aspect-ratio: 180/180;
   }
 }
 
@@ -50,6 +51,11 @@
   align-items: center;
   top: 0;
   left: 0;
+  @include mq(md) {
+    font-size: myrem(20);
+    width: calc(50 / 180 * 100%);
+    height: calc(50 / 180 * 100%);
+  }
 }
 
 .c-card03__contents {
@@ -83,42 +89,42 @@
 .c-card03__image02 {
   width: calc(66 / 152 *100%);
   @include mq(md) {
-    width: calc(72 / 180 *100%);
+    width: calc(78 / 180 *100%);
   }
 }
 
 .c-card03__image02 img {
   aspect-ratio: 66/50;
   @include mq(md) {
-    aspect-ratio: 72/63;
+    aspect-ratio: 78/60;
   }
 }
 
 .c-card03__image03 {
   width: calc(47 / 152 *100%);
   @include mq(md) {
-    width: calc(72 / 180 *100%);
+    width: calc(56 / 180 *100%);
   }
 }
 
 .c-card03__image03 img {
   aspect-ratio: 47/63;
   @include mq(md) {
-    aspect-ratio: 72/63;
+    aspect-ratio: 56/75;
   }
 }
 
 .c-card03__image04 {
   width: calc(52 / 152 *100%);
   @include mq(md) {
-    width: calc(72 / 180 *100%);
+    width: calc(62 / 180 *100%);
   }
 }
 
 .c-card03__image04 img {
   aspect-ratio: 52/54;
   @include mq(md) {
-    aspect-ratio: 72/63;
+    aspect-ratio: 62/64;
   }
 }
 
