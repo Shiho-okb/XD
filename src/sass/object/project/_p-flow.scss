@@ -29,3 +29,19 @@
       margin-top: myrem(5);
     }
 }
+
+.p-flow__card03 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: myrem(20);
+  margin-right: myrem(15);
+  @include mq(md) {
+    display: contents;
+  }
+}
+
+.p-flow__card03+.p-flow__card03 {
+  margin-top: myrem(30);
+  margin-right: initial;
+  margin-left: myrem(15);
+}

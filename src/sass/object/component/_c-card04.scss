@@ -88,7 +88,7 @@
 }
 
 .c-card04__text {
-  margin-top: myrem(24);
+  margin-top: myrem(23);
   font-size: myrem(14);
   line-height: calc(24 / 14);
   letter-spacing: .03em;
@@ -96,8 +96,4 @@
   @include mq(md) {
     width: 100%;
   }
-}
-
-.p-card04 {
-  counter-reset: number-m 0;
 }

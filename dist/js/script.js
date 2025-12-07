@@ -59,8 +59,9 @@ jQuery(function ($) {
     const wScroll = $(window).scrollTop();
 
     const targets = [
-      ".js-image",
       ".js-mainvisual__textbox",
+      ".js-mainvisual__title",
+      ".js-image",
       ".js-title"
     ].join(", ");
 
@@ -79,5 +80,5 @@ jQuery(function ($) {
 
     // ページ読み込み時にも判定
     checkFadeIn();
-    });
   });
+});

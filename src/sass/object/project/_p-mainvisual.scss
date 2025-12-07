@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.p-mainvisual-titlebox {
+.p-mainvisual__titlebox {
   transform: rotate(-7deg);
   position: absolute;
   z-index: 2;
@@ -12,7 +12,8 @@
   left: 5%;
 }
 
-.p-mainvisual-title {
+.p-mainvisual__title {
+  display: inline-block;
   font-size: clamp(18px, 3.9vw, 30px);
   line-height: calc(43 / 18);
   letter-spacing: 0;

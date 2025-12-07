@@ -17,8 +17,8 @@
   }
 }
 
-.p-card03 > .c-card03:not(:first-child)::before,
-.p-card03:not(:first-child) > .c-card03::before {
+.p-flow__card03 > .c-card03:not(:first-child)::before,
+.p-flow__card03:not(:first-child) > .c-card03::before {
   content: '';
   position: absolute;
   width: myrem(13);
@@ -138,20 +138,4 @@
   @include mq(md) {
     font-size: myrem(15);
   }
-}
-
-.p-card03 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: myrem(20);
-  margin-right: myrem(15);
-  @include mq(md) {
-    display: contents;
-  }
-}
-
-.p-card03 + .p-card03 {
-  margin-top: myrem(30);
-  margin-right: initial;
-  margin-left: myrem(15);
 }
