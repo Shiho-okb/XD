@@ -2,6 +2,7 @@
 
 .l-message {
   margin-top: myrem(70);
+  padding-bottom: myrem(70);
   @include mq(md) {
   }
 }
