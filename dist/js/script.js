@@ -62,6 +62,7 @@ jQuery(function ($) {
       ".js-mainvisual__textbox",
       ".js-mainvisual__title",
       ".js-image",
+      ".js-subtitle",
       ".js-title"
     ].join(", ");
 

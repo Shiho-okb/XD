@@ -4,6 +4,7 @@
   @include mq(md) {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     gap: myrem(40);
   }
 }
@@ -43,6 +44,7 @@
   margin-top: myrem(28);
   @include mq(md) {
     width: calc(522 / 1000 * 100%);
+    margin-top: 0;
   }
 }
 
@@ -72,9 +74,10 @@
   padding-bottom: myrem(13);
   @include mq(md) {
     font-size: myrem(24);
-    line-height: calc(34 / 24);
+    line-height: calc(35 / 24);
     letter-spacing: .1em;
-    padding-bottom: myrem(6);
+    padding-bottom: 0;
+    margin-top: myrem(1);
   }
 }
 
@@ -84,6 +87,7 @@
   color: $green;
   @include mq(md) {
     font-size: myrem(38);
+    line-height: calc(55 / 33);
   }
 }
 
