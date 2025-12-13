@@ -13,13 +13,10 @@
     display: block;
     position: absolute;
     top: myrem(249);
+    bottom: myrem(-186);
     right: 0;
-    width: calc(895 / 1400 * 100%);
-    aspect-ratio: 895 / 454;
-    background: url(/images/about/about_03.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    width: 64%;
+    background: url(/images/about/about_03.png) no-repeat center center / cover;
     z-index: -1;
   }
 }
@@ -41,7 +38,7 @@
 }
 
 .p-about__image01 {
-  width: myrem(208);
+  width: calc(208 / 345 * 100%);
   position: relative;
   z-index: 2;
   left: 0;
@@ -68,11 +65,11 @@
 }
 
 .p-about__image02 {
-  width: myrem(202);
+  width: calc(202 / 345 * 100%);
   height: auto;
   position: absolute;
   z-index: 1;
-  top: myrem(153);
+  top: calc(153 / 375 * 100vw);
   right: 0;
   opacity: 0;
   transform: translateX(100px);
@@ -97,9 +94,9 @@
 }
 
 .p-about__contents {
-  margin-top: myrem(83);
+  margin-top: calc(83 / 375 * 100vw);
   @include mq(md) {
-    margin-top: myrem(92);
+    margin-top: calc(92 / 1400 * 100vw);
     width: calc(500 / 1000 * 100%);
   }
 }

@@ -9,16 +9,16 @@
   content: "";
   display: block;
   position: absolute;
+  top: myrem(90);
   bottom: 0;
   left: 0;
-  width: calc(258 / 375 * 100%);
-  aspect-ratio: 258 / 1880;
-  background: url(/images/message/message_05.png) no-repeat center center/cover;
+  width: 69%;
+  background: url(/images/message/message_05.png) no-repeat center center / cover;
   z-index: -1;
   @include mq(md) {
-    width: calc(895 / 1400 * 100%);
-    aspect-ratio: 895 / 1238;
-    background: url(/images/message/message_05PC.png) no-repeat center center/cover;
+    top: myrem(180);
+    width: 64%;
+    background: url(/images/message/message_05PC.png) no-repeat center center / cover;
   }
 }
 

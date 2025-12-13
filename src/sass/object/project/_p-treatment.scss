@@ -11,12 +11,12 @@
   position: absolute;
   top: 0;
   width: 100%;
-  aspect-ratio: 375 / 700;
-  background: url(/images/treatment/treatment_05.png) no-repeat center center/cover;
+  height: 38%;
+  background: url(/images/treatment/treatment_05.png) no-repeat center center / cover;
   z-index: -1;
   @include mq(md) {
-    aspect-ratio: 1400 / 400;
-    background: url(/images/treatment/treatment_05PC.png) no-repeat center center/cover;
+    height: 57%;
+    background: url(/images/treatment/treatment_05PC.png) no-repeat center center / cover;
   }
 }
 

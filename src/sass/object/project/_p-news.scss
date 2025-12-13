@@ -9,15 +9,15 @@
   content: "";
   display: block;
   position: absolute;
-  bottom: myrem(8);
+  top: myrem(-95);
+  bottom: 0;
   left: 0;
   width: 100%;
-  aspect-ratio: 375 / 602;
-  background: url(/images/news/news_01.png) no-repeat center center/cover;
+  background: url(/images/news/news_01.png) no-repeat center center / cover;
   z-index: -1;
   @include mq(md) {
-    aspect-ratio: 1400 / 423;
-    background: url(/images/news/news_01PC.png) no-repeat center center/cover;
+    top: myrem(-128);
+    background: url(/images/news/news_01PC.png) no-repeat center center / cover;
   }
 }
 
