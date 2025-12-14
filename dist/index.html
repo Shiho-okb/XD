@@ -26,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Script&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.min.css">
   <!-- JavaScript -->
@@ -456,6 +458,43 @@
     </div>
   </section>
 
+  <!-- 院内風景 -->
+  <section class="p-interior l-interior">
+    <div class="p-interior__wrapper">
+      <h2 class="c-title js-title" data-en="Dental clinic interior">
+        院内風景
+      </h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/images/interior/interior_01.png" alt="" width="245" height="239" loading="lazy" decoding="async">
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/interior/interior_02.png" alt="" width="245" height="239" loading="lazy" decoding="async">
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/interior/interior_03.png" alt="" width="245" height="239" loading="lazy" decoding="async">
+          </div>
+          <div class="swiper-slide">
+            <img src="/images/dummy1.jpg" alt="" width="245" height="239" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <!-- 前へボタン -->
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="9.64" height="17.28" viewBox="0 0 9.64 17.28">
+            <path d="M0,0,7.226,7.226,0,14.451" transform="translate(8.226 15.866) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </div>
+        <!-- 次へボタン -->
+        <div class="swiper-button-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="9.64" height="17.28" viewBox="0 0 9.64 17.28" style="transform: scaleX(-1)">
+            <path d="M0,0,7.226,7.226,0,14.451" transform="translate(8.226 15.866) rotate(180)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- フッター -->
   <footer class="p-footer l-footer js-footer">
     <div class="p-footer__inner l-inner">
@@ -506,5 +545,8 @@
       <small class="p-footer__copyright">©︎2024 ASSIST DENTAL CLINIC All Rights Reserved.</small>
     </div>
   </footer>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </body>
 </html>

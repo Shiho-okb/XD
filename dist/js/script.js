@@ -57,7 +57,6 @@ jQuery(function ($) {
   function checkFadeIn() {
     const wHeight = $(window).height();
     const wScroll = $(window).scrollTop();
-
     const targets = [
       ".js-mainvisual__textbox",
       ".js-mainvisual__title",
@@ -65,7 +64,6 @@ jQuery(function ($) {
       ".js-subtitle",
       ".js-title"
     ].join(", ");
-
     $(targets).each(function () {
       const bPosition = $(this).offset().top;
       if (wScroll > bPosition - wHeight + 200) {
@@ -73,13 +71,30 @@ jQuery(function ($) {
       }
     });
   }
-
     // スクロール時
     $(window).scroll(function () {
       checkFadeIn();
     });
-
     // ページ読み込み時にも判定
     checkFadeIn();
+  });
+
+  // スワイパー
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    speed: 1500,
+    slidesPerView: 1.5,
+    spaceBetween: 14,
+    centeredSlides: true,
+    autoplay: {
+    // 自動再生
+    delay: 1000,
+    disableOnInteraction: false,
+    },
+    // 前後の矢印
+    navigation: {
+      nextEl: ".swiper-button-prev",
+      prevEl: ".swiper-button-next",
+    },
   });
 });

@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.p-interior .c-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  order: 1;
+  @include mq(md) {
+  }
+}
+
+.p-interior .swiper {
+  margin-top: myrem(27);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background: $green;
+  opacity: 0.7;
+  width: myrem(40);
+  height: myrem(40);
+  border-radius: 50%;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: myrem(18);
+  height: myrem(18);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: myrem(20);
+  aspect-ratio: 245/239;
+  object-fit: cover;
+}
