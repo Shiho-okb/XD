@@ -5,12 +5,42 @@
   opacity: 0;
   transform: translateY(100px);
   order: 1;
-  @include mq(md) {
-  }
 }
 
 .p-interior .swiper {
   margin-top: myrem(27);
+  @include mq(md) {
+    margin-top: myrem(76);
+    overflow: visible;
+  }
+}
+
+.swiper .swiper-slide {
+  width: calc(244 / 375 * 100%);
+  border-radius: myrem(20);
+  overflow: hidden;
+  @include mq(md) {
+    width: calc(356 / 1400 * 100%);
+    transform: scale(1);
+    transition: all .7s;
+  }
+}
+
+.swiper .swiper-slide-active {
+  @include mq(md) {
+    transform: scale(1.22);
+    z-index: 1;
+  }
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 245/239;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 435/423;
+  }
 }
 
 .swiper-button-prev,
@@ -20,18 +50,37 @@
   width: myrem(40);
   height: myrem(40);
   border-radius: 50%;
+  @include mq(md) {
+    height:calc(50 / 1400 * 100vw);
+    width: calc(50 / 1400 * 100vw);
+  }
+}
+
+/* 前への矢印 */
+.p-interior .swiper-button-prev {
+  @include mq(md) {
+    left: auto;
+    right: calc(260 / 1400 * 100%);
+    top: 127%;
+    transform: translateY(-50%);
+  }
+}
+
+/* 次への矢印 */
+.p-interior .swiper-button-next {
+  @include mq(md) {
+    right: calc(200 / 1400 * 100%);
+    top: 127%;
+    transform: translateY(-50%);
+  }
 }
 
 .swiper-button-prev svg,
 .swiper-button-next svg {
   width: myrem(18);
   height: myrem(18);
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: myrem(20);
-  aspect-ratio: 245/239;
-  object-fit: cover;
+  @include mq(md) {
+    height: calc(21 / 1400 * 100vw);
+    width: calc(21 / 1400 * 100vw);
+  }
 }

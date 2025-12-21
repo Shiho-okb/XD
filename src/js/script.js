@@ -86,15 +86,25 @@ jQuery(function ($) {
     slidesPerView: 1.5,
     spaceBetween: 14,
     centeredSlides: true,
-    autoplay: {
+
     // 自動再生
-    delay: 1000,
-    disableOnInteraction: false,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
     },
+
     // 前後の矢印
     navigation: {
-      nextEl: ".swiper-button-prev",
-      prevEl: ".swiper-button-next",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // レスポンシブ設定
+    breakpoints: {
+      768: {
+        slidesPerView: '3.5',
+        spaceBetween: 60,
+      },
     },
   });
 });
