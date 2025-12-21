@@ -10,7 +10,8 @@
 .p-interior .swiper {
   margin-top: myrem(27);
   @include mq(md) {
-    margin-top: myrem(76);
+    margin-top: myrem(38);
+    padding-bottom: myrem(60);
     overflow: visible;
   }
 }
@@ -21,14 +22,14 @@
   overflow: hidden;
   @include mq(md) {
     width: calc(356 / 1400 * 100%);
-    transform: scale(1);
+    transform: scale(0.82);
     transition: all .7s;
   }
 }
 
 .swiper .swiper-slide-active {
   @include mq(md) {
-    transform: scale(1.22);
+    transform: scale(1);
     z-index: 1;
   }
 }
@@ -61,7 +62,7 @@
   @include mq(md) {
     left: auto;
     right: calc(260 / 1400 * 100%);
-    top: 127%;
+    top: 99%;
     transform: translateY(-50%);
   }
 }
@@ -70,7 +71,7 @@
 .p-interior .swiper-button-next {
   @include mq(md) {
     right: calc(200 / 1400 * 100%);
-    top: 127%;
+    top: 99%;
     transform: translateY(-50%);
   }
 }

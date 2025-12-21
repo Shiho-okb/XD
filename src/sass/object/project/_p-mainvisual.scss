@@ -102,20 +102,3 @@
     margin-top: myrem(15);
   }
 }
-
-/* フェードインアニメーション */
-@keyframes fadeIn {
-  0% {
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-/* フェードインさせるクラス */
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}

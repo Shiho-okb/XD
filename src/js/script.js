@@ -67,7 +67,7 @@ jQuery(function ($) {
     $(targets).each(function () {
       const bPosition = $(this).offset().top;
       if (wScroll > bPosition - wHeight + 200) {
-        $(this).addClass("fadeIn");
+        $(this).addClass("u-fadeIn");
       }
     });
   }
@@ -88,10 +88,10 @@ jQuery(function ($) {
     centeredSlides: true,
 
     // 自動再生
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 1000,
+    //   disableOnInteraction: false,
+    // },
 
     // 前後の矢印
     navigation: {
@@ -102,8 +102,8 @@ jQuery(function ($) {
     // レスポンシブ設定
     breakpoints: {
       768: {
-        slidesPerView: '3.5',
-        spaceBetween: 60,
+        slidesPerView: '3.32',
+        spaceBetween: -20,
       },
     },
   });
