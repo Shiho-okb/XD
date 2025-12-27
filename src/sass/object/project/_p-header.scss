@@ -192,7 +192,7 @@
     height: inherit;
     display: flex;
     align-items: center;
-    padding: calc(28 / 1400 * 100vw) calc(26 / 1400 * 100vw);
+    padding: myrem(28) calc(26 / 1400 * 100vw);
     transition: 0.4s;
   }
 }
@@ -381,7 +381,7 @@
   padding: myrem(4) myrem(55) myrem(12) myrem(54);
   @include mq(md) {
     align-items: flex-end;
-    padding: calc(20 / 1400 * 100vw) calc(25 / 1400 * 100vw) calc(11 / 1400 * 100vw) calc(25 / 1400 * 100vw);
+    padding: myrem(20) calc(25 / 1400 * 100vw) myrem(11) calc(25 / 1400 * 100vw);
   }
 }
 
@@ -400,6 +400,7 @@
   @include mq(md) {
     display: block;
     font-size: calc(16 / 1400 * 100vw);
+    line-height: calc(16 / 16);
     font-weight: bold;
   }
 }
@@ -444,7 +445,7 @@
   display: none;
   @include mq(md) {
     display: block;
-    font-size: calc(12 / 1400 * 100vw);
+    font-size: clamp(9px, 1.2vw, 12px);
   }
 }
 
@@ -476,7 +477,7 @@ Web予約ボタン
     font-size: clamp(10px, 1.2vw, 18px);
     font-weight: 700;
     line-height: calc(18 / 18);
-    padding: calc(28 / 1400 * 100vw) calc(16 / 1400 * 100vw) calc(28 / 1400 * 100vw) calc(18 / 1400 * 100vw);
+    padding: myrem(28) calc(16 / 1400 * 100vw) myrem(28) calc(18 / 1400 * 100vw);
     align-items: center;
     height: inherit;
   }

@@ -111,9 +111,12 @@
 診察案内テーブル
 -------------------------------------------*/
 .p-access__table {
-  display: block;
+  width: 100%;
   border-collapse: collapse;
   margin-top: myrem(35);
+  @include mq(md) {
+    width: auto;
+  }
 }
 
 .p-access__table th {
