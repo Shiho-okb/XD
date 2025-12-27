@@ -14,6 +14,10 @@
   width: 100%;
   background: url(/images/access/access_01.png) no-repeat center center / cover;
   z-index: -1;
+  @include mq(md) {
+    top: myrem(384);
+    background: url(/images/access/access_01PC.png) no-repeat center center / cover;
+  }
 }
 
 .p-access .c-title {
@@ -29,6 +33,10 @@
   border-radius: myrem(50);
   overflow: hidden;
   aspect-ratio: 345/195;
+  @include mq(md) {
+    margin-top: myrem(40);
+    aspect-ratio: 1000/499;
+  }
 }
 
 .p-access iframe {
@@ -39,6 +47,12 @@
 
 .p-access__wrapper {
   margin-top: myrem(20);
+  @include mq(md) {
+    margin-top: myrem(60);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 }
 
 .p-access__logo {
@@ -47,6 +61,8 @@
   letter-spacing: 0.1em;
   font-weight: 100;
   @include mq(md) {
+    font-size: myrem(32);
+    line-height: calc(46 / 32);
   }
 }
 
@@ -54,22 +70,36 @@
   display: flex;
   flex-direction: column;
   margin-top: myrem(12);
+  @include mq(md) {
+    margin-top: myrem(20);
+  }
 }
 
 .p-access__phonenumber-text01 {
   font-size: myrem(19);
   font-weight: bold;
+  @include mq(md) {
+    font-size: myrem(22);
+  }
 }
 
 .p-access__phonenumber-text02 {
   font-size: myrem(30);
   font-weight: bold;
   line-height: calc(44 / 30);
+  @include mq(md) {
+    font-size: myrem(35);
+    line-height: calc(51 / 35);
+  }
 }
 
 .p-access__text {
   font-size: myrem(12);
   line-height: calc(24 / 12);
+  @include mq(md) {
+    font-size: myrem(14);
+    line-height: calc(32 / 14);
+  }
 }
 
 .p-access__text-address {
@@ -83,7 +113,6 @@
 .p-access__table {
   display: block;
   border-collapse: collapse;
-  overflow-x: scroll;
   margin-top: myrem(35);
 }
 
@@ -93,6 +122,11 @@
   font-weight: normal;
   font-size: myrem(14);
   letter-spacing: -.05em;
+  @include mq(md) {
+    font-size: myrem(16);
+    letter-spacing: .1em;
+    padding: myrem(6) myrem(17);
+  }
 }
 
 .p-access__table th,
@@ -104,17 +138,30 @@
 .p-access__table td {
   padding: myrem(7.5) myrem(10.5);
   font-size: myrem(16);
+  @include mq(md) {
+    padding: myrem(15) myrem(17) myrem(12);
+  }
 }
 
 .p-access__table td.p-access__table-item {
   font-size: myrem(14);
   padding: myrem(7.5) myrem(10.5);
+  @include mq(md) {
+    font-size: myrem(16);
+    padding: myrem(15) myrem(17) myrem(12);
+  }
+}
+
+.p-access__table-item br {
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .p-access__btn {
   width: myrem(240);
   margin: myrem(40) auto 0;
   @include mq(md) {
-    margin: myrem(55) auto 0;
+    margin: myrem(50) auto 0;
   }
 }
