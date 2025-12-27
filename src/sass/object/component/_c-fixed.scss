@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.c-fixed {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+/* フェードインさせるクラス */
+.c-fixed.is-show {
+  opacity: 1;
+}
+
+.c-fixed__item {
+  width: 50%;
+  height: myrem(60);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-fixed__item--phonenumber {
+  color: #707070;
+  background-color: $white;
+}
+
+.c-fixed__item--phonenumber a {
+  line-height: myrem(60);
+}
+
+.c-fixed__item--phonenumber__textbox {
+  display: flex;
+  align-items: center;
+  gap: myrem(6);
+}
+
+.c-fixed__item--phonenumber__img {
+  width: myrem(11);
+}
+
+.c-fixed__item--phonenumber__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 11 / 16;
+  object-fit: cover;
+}
+
+.c-fixed__item--phonenumber__text {
+  font-size: myrem(19);
+  font-weight: 700;
+  letter-spacing: .027em;
+}
+
+.c-fixed__item--reservation {
+  color: $white;
+  background-color: $green;
+}
+
+.c-fixed__item--reservation a {
+  display: flex;
+  align-items: center;
+  font-size: myrem(17);
+  font-weight: 500;
+  letter-spacing: .1em;
+  line-height: myrem(60);
+  gap: myrem(13);
+}
+
+.c-fixed__item--reservation__img {
+  width: myrem(23);
+}
+
+.c-fixed__item--reservation__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 23 / 24;
+  object-fit: cover;
+}

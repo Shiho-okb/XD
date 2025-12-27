@@ -57,6 +57,8 @@ jQuery(function ($) {
   function checkFadeIn() {
     const wHeight = $(window).height();
     const wScroll = $(window).scrollTop();
+
+    /* ===== 通常フェードイン ===== */
     const targets = [
       ".js-mainvisual__textbox",
       ".js-mainvisual__title",
@@ -70,12 +72,18 @@ jQuery(function ($) {
         $(this).addClass("u-fadeIn");
       }
     });
+
+    /* ===== 追従ボタン用 ===== */
+    const fixedBtn = $(".js-fixed");
+    if (wScroll > 100) {
+      fixedBtn.addClass("is-show");
+    } else {
+      fixedBtn.removeClass("is-show");
+    }
   }
-    // スクロール時
-    $(window).scroll(function () {
-      checkFadeIn();
-    });
-    // ページ読み込み時にも判定
+
+    // 初期表示
+    $(window).on("scroll", checkFadeIn);
     checkFadeIn();
   });
 
