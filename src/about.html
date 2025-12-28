@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>タイトル</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+
+  <meta name="robots" content="noindex, nofollow" /> <!-- 検索エンジンにインデックスしないよう指示 -->
+  <meta name="googlebot" content="noindex, nofollow" /> <!-- Googleのクローラーにインデックスしないよう指示 -->
+  <meta name="msnbot" content="noindex, nofollow" /> <!-- Bingのクローラーにインデックスしないよう指示 -->
+  <meta name="slurp" content="noindex, nofollow" /> <!-- Yahooのクローラーにインデックスしないよう指示 -->
+  <!-- ファビコン -->
+  <link rel="icon" href="" />
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Script&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.min.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script defer src="./js/script.min.js"></script>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="p-header l-header js-header">
+    <div class="p-header__inner">
+      <div class="p-header__wrapper">
+        <h1 class="p-header__logo js-header">
+            <a href="/" class="p-header__logo-image js-header">
+              <img src="./images/header/header_logo.png" alt="ASSIST DENTAL CLINIC のロゴ" width="190" height="24">
+            </a>
+          </h1>
+        <button class="p-header__hamburger js-hamburger" aria-label="ハンバーガーボタン">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="p-header__nav js-drawer">
+          <div class="p-header__nav-wrapper">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">新着情報</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">診察内容</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">治療の流れ</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <div class="p-header-nav-item__accordion">
+                  <a href="./about.html" class="p-header-nav-item__link">当院について</a>
+                  <span class="p-header-nav-item__toggle js-accordion"></span>
+                </div>
+                <ul class="p-header__dropmenu p-header-dropmenu">
+                  <li class="p-header-dropmenu__item">
+                    <a href="./about.html#about" class="p-header-dropmenu__link">
+                      <span>院長挨拶</span>
+                    </a>
+                  </li>
+                  <li class="p-header-dropmenu__item">
+                    <a href="./about.html#facility" class="p-header-dropmenu__link">
+                      <span>設備紹介</span>
+                    </a>
+                  </li>
+                  <li class="p-header-dropmenu__item">
+                    <a href="./about.html#company" class="p-header-dropmenu__link">
+                      <span>会社概要</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="p-header__btnlist">
+              <li class="p-header__btnitem p-header__btnitem--phonenumber">
+                <a href="tel:03-0000-0000">
+                  <div class="p-header__btnitem--phonenumber__textbox">
+                    <div class="p-header__btnitem--phonenumber__img">
+                      <img src="./images/header/icon_02.png" alt="電話のロゴ" width="15" height="21">
+                    </div>
+                    <span class="p-header__btnitem--phonenumber__text01">TEL.</span><span class="p-header__btnitem--phonenumber__text02">03-0000-0000</span>
+                  </div>
+                  <span class="p-header__btnitem--phonenumber__text03">お気軽にお問い合わせください</span>
+                  <span class="p-header__btnitem--phonenumber__text04">営業時間　10:00〜19:00</span>
+                </a>
+              </li>
+              <li class="p-header__btnitem p-header__btnitem--reservation">
+                <a href="./reservation.html">
+                  <div class="p-header__btnitem--reservation__img">
+                    <img src="./images/header/icon_01.png" alt="カレンダーのロゴ" width="30" height="32">
+                  </div>
+                  Web予約
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- メインエリア -->
+  <main>
+    <!-- 当院について -->
+    <section class="p-clinic l-clinic">
+      <div class="p-clinic__inner l-inner">
+        <!-- パンくずリスト -->
+        <nav class="c-breadcrumb" aria-label="パンくずリスト">
+          <ol class="c-breadcrumb__list">
+            <li class="c-breadcrumb__item"><a href="/">TOP</a></li>
+            <li class="c-breadcrumb__item">当院について</li>
+          </ol>
+        </nav>
+        <h2 class="c-title js-title" data-en="About us">
+          当院について
+        </h2>
+        <div class="p-clinic__wrapper01">
+          <picture class="p-clinic__image">
+            <source srcset="/images/treatment/treatment_01PC.webp" media="(min-width: 768px)" />
+            <img src="/images/clinic/clinic_03.png" alt="虫歯治療・予防歯科" width="315" height="188" loading="lazy" decoding="async">
+          </picture>
+          <div class="p-clinic__textbox">
+            <p class="p-clinic__text01">
+              皆さまへ、院長の川上です。私たちの病院は、常に最高の医療と温かいサポートを提供することを使命としています。患者さまの健康と快適な生活をサポートするため、全力で取り組んでいます。信頼と安心をお届けする病院を目指し、スタッフ一同、心からのおもてなしを心掛けています。いつでも皆さまの健康をお守りするために、お待ちしております。
+            </p>
+            <p class="p-clinic__text02">
+              <span>院長</span>
+              <span>田中　太郎</span>
+            </p>
+          </div>
+        </div>
+        <div class="p-clinic__wrapper02">
+          <!-- 略歴 -->
+          <span class="p-clinic__subtitle">略歴</span>
+          <dl class="p-clinic__career">
+            <div class="p-clinic__career-item">
+              <dt class="p-clinic__career-term">国立日本大学歯科学部卒業</dt>
+              <dd class="p-clinic__career-desc"></dd>
+            </div>
+            <div class="p-clinic__career-item">
+              <dt class="p-clinic__career-term">国立日本大学歯科口腔外科入局</dt>
+              <dd class="p-clinic__career-desc"></dd>
+            </div>
+            <div class="p-clinic__career-item">
+              <dt class="p-clinic__career-term">同大学麻酔科、救急科研修</dt>
+              <dd class="p-clinic__career-desc"></dd>
+            </div>
+            <div class="p-clinic__career-item">
+              <dt class="p-clinic__career-term">医療法人日本会</dt>
+              <dd class="p-clinic__career-desc">
+                日本本街病院勤務（高齢者、有病者、小児）
+              </dd>
+            </div>
+          </dl>
+          <!-- 資格・所属学会 -->
+          <span class="p-clinic__subtitle">資格・所属学会</span>
+          <div class="p-clinic__info">
+            <div class="p-clinic__info-item">
+              <p class="p-clinic__info-heading">【所属学会】</p>
+              <ul class="p-clinic__info-list">
+                <li class="p-clinic__underline">日本口腔外科学会</li>
+                <li class="p-clinic__underline">日本口腔インプラント学会</li>
+                <li>日本成人矯正歯科学会</li>
+                <li>日本成人インプラント学会</li>
+              </ul>
+            </div>
+
+            <div class="p-clinic__info-item">
+              <p class="p-clinic__info-heading">【資格・研修歴】</p>
+              <ul class="p-clinic__info-list">
+                <li>口腔感染予防外来認定医</li>
+                <li>ノーベルインプラント認定医</li>
+                <li>SPIインプラント認定医</li>
+                <li>日本口腔インプラント認定医</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 設備紹介 -->
+  </main>
+
+  <!-- 追従ボタン -->
+  <ul class="c-fixed js-fixed">
+    <li class="c-fixed__item c-fixed__item--phonenumber">
+      <a href="tel:03-0000-0000">
+        <div class="c-fixed__item--phonenumber__textbox">
+          <div class="c-fixed__item--phonenumber__img">
+            <img src="./images/header/icon_02.png" alt="電話のロゴ" width="15" height="21">
+          </div>
+          <span class="c-fixed__item--phonenumber__text">03-0000-0000</span>
+        </div>
+      </a>
+    </li>
+    <li class="c-fixed__item c-fixed__item--reservation">
+      <a href="./reservation.html">
+        <div class="c-fixed__item--reservation__img">
+          <img src="./images/header/icon_01.png" alt="カレンダーのロゴ" width="30" height="32">
+        </div>
+        Web予約
+      </a>
+    </li>
+  </ul>
+
+  <!-- フッター -->
+  <footer class="p-footer l-footer js-footer">
+    <div class="p-footer__inner l-inner">
+      <div class="p-footer__wrapper">
+        <h2 class="p-footer__logo">ASSIST DENTAL CLINIC</h2>
+        <nav class="p-footer__nav js-drawer">
+          <ul class="p-footer__nav-list">
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">新着情報</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">診察内容</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">治療の流れ</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <div class="p-footer-nav-item__accordion">
+                <a href="./about.html" class="p-footer-nav-item__link">当院について</a>
+              </div>
+              <ul class="p-footer__dropmenu p-footer-dropmenu">
+                <li class="p-footer-dropmenu__item">
+                  <a href="./about.html#about" class="p-footer-dropmenu__link">
+                    <span>院長挨拶</span>
+                  </a>
+                  <span class="p-footer-dropmenu__toggle js-accordion"></span>
+                </li>
+                <li class="p-footer-dropmenu__item">
+                  <a href="./about.html#facility" class="p-footer-dropmenu__link">
+                    <span>設備紹介</span>
+                  </a>
+                  <span class="p-footer-dropmenu__toggle js-accordion"></span>
+                </li>
+                <li class="p-footer-dropmenu__item">
+                  <a href="./about.html#company" class="p-footer-dropmenu__link">
+                    <span>会社概要</span>
+                  </a>
+                  <span class="p-footer-dropmenu__toggle js-accordion"></span>
+                </li>
+              </ul>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <small class="p-footer__copyright">©︎2024 ASSIST DENTAL CLINIC All Rights Reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>

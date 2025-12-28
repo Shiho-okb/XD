@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.c-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin-block: 0;
+}
+
+.c-breadcrumb__item {
+  display: flex;
+  align-items: center;
+  font-size: myrem(12);
+}
+
+.c-breadcrumb__item:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: myrem(9);
+  height: myrem(9);
+  border-top: 1px solid #707070;
+  border-right: 1px solid #707070;
+  transform: rotate(45deg);
+  margin: 0 myrem(12) 0 myrem(8);
+  color: #707070;
+}
