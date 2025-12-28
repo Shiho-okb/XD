@@ -15,8 +15,8 @@
   background: url(/images/clinic/clinic_01.png) no-repeat center center / cover;
   z-index: -2;
   @include mq(md) {
-    // height: 57%;
-    // background: url(/images/treatment/treatment_05PC.png) no-repeat center center / cover;
+    height: 27%;
+    background: url(/images/clinic/clinic_01PC.png) no-repeat center center / cover;
   }
 }
 
@@ -33,8 +33,11 @@
   border-radius: myrem(20);
   z-index: -1;
   @include mq(md) {
-    // height: 57%;
-    // background: url(/images/treatment/treatment_05PC.png) no-repeat center center / cover;
+    top: myrem(100);
+    left: myrem(100);
+    right: myrem(100);
+    width: 86%;
+    background: url(/images/clinic/clinic_02PC.png) no-repeat center center / cover;
   }
 }
 
@@ -46,6 +49,10 @@
 .p-clinic .c-breadcrumb {
   padding-top: myrem(59);
   padding-left: myrem(4);
+  @include mq(md) {
+    padding-top: myrem(130);
+    padding-left: 0;
+  }
 }
 
 .p-clinic .c-title {
@@ -53,10 +60,25 @@
   opacity: 0;
   transform: translateY(100px);
   margin-top: myrem(32);
+  @include mq(md) {
+    margin-top: myrem(40);
+  }
 }
 
 .p-clinic__wrapper01 {
   margin-top: myrem(25);
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: myrem(30);
+    margin-top: myrem(40);
+  }
+}
+
+.p-clinic__image {
+  @include mq(md) {
+    width: calc(485 / 1000 * 100%);
+  }
 }
 
 .p-clinic__image img {
@@ -66,21 +88,22 @@
   object-fit: cover;
   border-radius: myrem(15);
   @include mq(md) {
-    // aspect-ratio: 230/300;
-    // border-radius: myrem(30);
+    aspect-ratio: 485/290;
+    border-radius: myrem(20);
   }
 }
 
 .p-clinic__textbox {
   margin-top: myrem(15);
+  @include mq(md) {
+    width: calc(485 / 1000 * 100%);
+  }
 }
 
 .p-clinic__text01 {
   font-size: myrem(14);
   line-height: calc(30 / 14);
   text-align: left;
-  @include mq(md) {
-  }
 }
 
 .p-clinic__text02 {
@@ -105,6 +128,16 @@
 -------------------------------------------*/
 .p-clinic__wrapper02 {
   margin-top: myrem(37);
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-career__block {
+  @include mq(md) {
+    width: calc(485 / 1000 * 100%);
+  }
 }
 
 .p-clinic__subtitle {
@@ -114,7 +147,11 @@
   letter-spacing: 0.1em;
   color: $white;
   background-color: $green;
-  border-radius: myrem(10) myrem(10) 0 0;
+  border-radius: myrem(8) myrem(8) 0 0;
+  @include mq(md) {
+    font-size: myrem(22);
+    padding: myrem(8) myrem(36) myrem(8);
+  }
 }
 
 .p-clinic__career {
@@ -126,19 +163,41 @@
   padding: myrem(14) 0;
   font-size: myrem(14);
   letter-spacing: .08em;
+  @include mq(md) {
+    padding: myrem(19) 0;
+  }
 }
 
 .p-clinic__career-item:last-child {
   line-height: calc(24 / 14);
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.p-clinic__career-desc:last-child {
+  @include mq(md) {
+    margin-left: myrem(15);
+  }
 }
 
 
 /*-------------------------------------------
 資格・所属学会
 -------------------------------------------*/
-.p-clinic__subtitle:nth-of-type(2) {
+.p-info__block {
   margin-top: myrem(30);
+  @include mq(md) {
+    margin-top: 0;
+    width: calc(485 / 1000 * 100%);
+  }
+}
+
+.p-info__block .p-clinic__subtitle {
   padding: myrem(7) myrem(16) myrem(5);
+  @include mq(md) {
+    padding: myrem(11) myrem(16) myrem(5);
+  }
 }
 
 .p-clinic__info {
@@ -150,10 +209,29 @@
   padding: myrem(15) 0;
   font-size: myrem(14);
   letter-spacing: .08em;
+  @include mq(md) {
+    display: flex;
+    padding: myrem(18) 0;
+  }
 }
 
 .p-clinic__info-list {
   margin-top: myrem(8);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-clinic__info-item:first-child .p-clinic__info-list {
+  @include mq(md) {
+    margin-left: myrem(50);
+  }
+}
+
+.p-clinic__info-item:last-child .p-clinic__info-list {
+  @include mq(md) {
+    margin-left: myrem(20);
+  }
 }
 
 .p-clinic__info-list li {

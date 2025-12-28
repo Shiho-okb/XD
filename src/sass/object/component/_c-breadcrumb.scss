@@ -12,6 +12,9 @@
   display: flex;
   align-items: center;
   font-size: myrem(12);
+  @include mq(md) {
+    font-size: myrem(16);
+  }
 }
 
 .c-breadcrumb__item:not(:last-child)::after {
@@ -24,4 +27,7 @@
   transform: rotate(45deg);
   margin: 0 myrem(12) 0 myrem(8);
   color: #707070;
+  @include mq(md) {
+    margin: 0 myrem(15) 0 myrem(12);
+  }
 }
