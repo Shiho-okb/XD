@@ -4,6 +4,7 @@
   margin-top: myrem(80);
   padding-block: myrem(60) myrem(80);
   @include mq(md) {
-    // margin-top: myrem(80);
+    margin-top: myrem(110);
+    padding-block: myrem(101) myrem(110);
   }
 }

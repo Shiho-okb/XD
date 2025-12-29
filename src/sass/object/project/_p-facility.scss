@@ -16,9 +16,8 @@
   background: url(../images/facility/facility_06.png) no-repeat center center / cover;
   z-index: -1;
   @include mq(md) {
-    // top: myrem(180);
-    // width: 64%;
-    // background: url(/images/message/message_05PC.png) no-repeat center center / cover;
+    width: 64%;
+    background: url(../images/facility/facility_06PC.png) no-repeat center center / cover;
   }
 }
 
@@ -35,9 +34,13 @@
     flex-wrap: wrap;
     gap: myrem(40) myrem(30);
     justify-content: center;
+    margin-top: myrem(40);
   }
 }
 
 .p-facility .c-card05 {
   margin-top: myrem(39);
+  @include mq(md) {
+    margin-top: 0;
+  }
 }

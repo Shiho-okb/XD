@@ -24,6 +24,11 @@
   line-height: calc(30 / 21);
   letter-spacing: .1em;
   font-weight: normal;
+  @include mq(md) {
+    margin-top: myrem(19);
+    font-size: myrem(20);
+    line-height: calc(29 / 21);
+  }
 }
 
 .c-card05__text {
@@ -31,4 +36,7 @@
   font-size: myrem(14);
   line-height: calc(24 / 14);
   letter-spacing: .03em;
+  @include mq(md) {
+    margin-top: myrem(10);
+  }
 }
