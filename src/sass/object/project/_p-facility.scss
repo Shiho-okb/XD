@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.p-facility {
+  position: relative;
+  overflow: visible;
+}
+
+.p-facility::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 69%;
+  background: url(../images/facility/facility_06.png) no-repeat center center / cover;
+  z-index: -1;
+  @include mq(md) {
+    // top: myrem(180);
+    // width: 64%;
+    // background: url(/images/message/message_05PC.png) no-repeat center center / cover;
+  }
+}
+
+.p-facility .c-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.p-facility__wrapper {
+  margin-top: myrem(41);
+  @include mq(md) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: myrem(40) myrem(30);
+    justify-content: center;
+  }
+}
+
+.p-facility .c-card05 {
+  margin-top: myrem(39);
+}

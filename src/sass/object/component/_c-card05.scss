@@ -32,12 +32,3 @@
   line-height: calc(24 / 14);
   letter-spacing: .03em;
 }
-
-.p-card05 {
-  @include mq(md) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: myrem(40) myrem(30);
-    justify-content: center;
-  }
-}
