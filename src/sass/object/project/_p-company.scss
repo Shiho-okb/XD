@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.p-company .c-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.p-company__list {
+  margin-top: myrem(36);
+  border-top: 1px solid rgba(0, 0, 0, 0.31);
+}
+
+.p-company__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.31);
+}
+
+.p-company__term {
+  background-color: $green3;
+  text-align: center;
+  font-size: myrem(14);
+  letter-spacing: 0.1em;
+  line-height: calc(20 / 14);
+  padding: myrem(10) 0;
+}
+
+.p-company__desc {
+  text-align: center;
+  font-size: myrem(14);
+  letter-spacing: 0.1em;
+  line-height: calc(20 / 14);
+  padding: myrem(10) 0 myrem(20);
+}
+
+.p-company__item:last-child .p-company__desc {
+  padding: myrem(10) 0 myrem(10);
+}
+
+.p-company__desc a {
+  text-decoration: underline;
+  word-break: break-all;
+}
