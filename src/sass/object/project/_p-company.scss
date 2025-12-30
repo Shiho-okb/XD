@@ -9,10 +9,21 @@
 .p-company__list {
   margin-top: myrem(36);
   border-top: 1px solid rgba(0, 0, 0, 0.31);
+  @include mq(md) {
+  margin-top: myrem(40);
+  }
 }
 
 .p-company__item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.31);
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.p-company__address {
+  @include mq(md) {
+  }
 }
 
 .p-company__term {
@@ -22,6 +33,15 @@
   letter-spacing: 0.1em;
   line-height: calc(20 / 14);
   padding: myrem(10) 0;
+  @include mq(md) {
+    width: calc(314 /1000 * 100%);
+    font-size: myrem(16);
+    line-height: calc(24 / 16);
+    padding: myrem(20) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .p-company__desc {
@@ -30,13 +50,36 @@
   letter-spacing: 0.1em;
   line-height: calc(20 / 14);
   padding: myrem(10) 0 myrem(20);
+  @include mq(md) {
+    width: calc(686 /1000 * 100%);
+    text-align: left;
+    font-size: myrem(16);
+    line-height: calc(24 / 16);
+    padding: myrem(19) myrem(29);
+  }
 }
 
 .p-company__item:last-child .p-company__desc {
   padding: myrem(10) 0 myrem(10);
+  @include mq(md) {
+    padding: myrem(19) myrem(29);
+  }
 }
 
 .p-company__desc a {
   text-decoration: underline;
   word-break: break-all;
+}
+
+.p-company__desc--address br {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.p-company__desc--business br {
+  @include mq(md) {
+    display: none;
+  }
 }
