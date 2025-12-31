@@ -1,0 +1,277 @@
+@use "global" as *;
+
+.p-reservation {
+  position: relative;
+  overflow: visible;
+}
+
+.p-reservation::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 14.64%;
+  background: url(/images/clinic/clinic_01.png) no-repeat center center / cover;
+  z-index: -2;
+  @include mq(md) {
+    // height: 27%;
+    // background: url(/images/clinic/clinic_01PC.png) no-repeat center center / cover;
+  }
+}
+
+.p-reservation::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: myrem(39);
+  left: myrem(15);
+  right: myrem(15);
+  width: 92%;
+  height: 100%;
+  background: url(/images/clinic/clinic_02.png) no-repeat center center / cover;
+  border-radius: myrem(20);
+  z-index: -1;
+  @include mq(md) {
+    // top: myrem(100);
+    // left: myrem(100);
+    // right: myrem(100);
+    // width: 86%;
+    // background: url(/images/clinic/clinic_02PC.png) no-repeat center center / cover;
+  }
+}
+
+.p-reservation__inner {
+  padding-right: myrem(30);
+  padding-left: myrem(30);
+}
+
+.p-reservation .c-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100px);
+  margin-top: myrem(60);
+  padding-top: myrem(72);
+  @include mq(md) {
+    // margin-top: myrem(40);
+  }
+}
+
+.p-reservation__form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*-------------------------------------------
+フォーム共通スタイル
+-------------------------------------------*/
+.p-reservation__item {
+  display: flex;
+  flex-direction: column;
+  gap: myrem(20);
+  margin-top: myrem(40);
+}
+
+.p-reservation__item.p-reservation__item--message {
+  gap: 0
+}
+
+.p-reservation__label {
+  display: flex;
+  align-items: center;
+  gap: myrem(12);
+  font-size: myrem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: .1em;
+}
+
+.p-reservation__required {
+  background: $pink;
+  color: $white;
+  font-size: myrem(12);
+  letter-spacing: .1em;
+  padding: myrem(5) myrem(10);
+}
+
+.p-reservation__input,
+.p-reservation__textarea {
+  width: 100%;
+  padding: myrem(10) myrem(24) myrem(10);
+  border: none;
+  background: $green3;
+  border-radius: myrem(10);
+  font-size: myrem(14);
+  line-height: calc(20 / 14);
+  letter-spacing: .1em;
+}
+
+.p-reservation__textarea {
+  margin-top: myrem(15);
+  min-height: myrem(182);
+  resize: vertical;
+}
+
+.p-reservation__input::placeholder {
+  color: #CAD5D5;
+}
+
+
+/*-------------------------------------------
+注意書き
+-------------------------------------------*/
+.p-reservation__text-email,
+.p-reservation__text-message,
+.p-reservation__text-privacy {
+  font-size: myrem(12);
+  line-height: calc(17 / 12);
+}
+
+.p-reservation__text-email {
+  margin-top: myrem(15);
+  letter-spacing: .1em;
+}
+
+.p-reservation__text-message {
+  margin-top: myrem(11);
+  letter-spacing: .04em;
+}
+
+.p-reservation__text-privacy {
+  display: flex;
+  justify-content: space-between;
+  margin-top: myrem(11);
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+
+.p-reservation__text-privacy input {
+  margin: 0;
+  appearance: none;
+  position: relative;
+  width: myrem(17);
+  height: myrem(17);
+  border: 1px solid $black;
+  cursor: pointer;
+}
+
+.p-reservation__text-privacy input:checked::after {
+  content: "";
+  position: absolute;
+  top: myrem(-2);
+  left: myrem(2);
+  width: myrem(20);
+  height: myrem(10);
+  border-bottom: 3px solid $green;
+  border-left: 3px solid $green;
+  transform: rotate(-45deg);
+}
+
+.p-reservation__text-privacy a {
+  text-decoration: underline;
+  text-underline-offset: myrem(5);
+}
+
+
+/*-------------------------------------------
+ラジオボタン
+-------------------------------------------*/
+.p-reservation__radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-reservation__radio.p-reservation__radio--visit {
+  justify-content: flex-start;
+  gap: myrem(22);
+}
+
+.p-reservation__radio label{
+  display: inline-flex;
+  align-items: center;
+  column-gap: myrem(10);
+  font-size: myrem(14);
+  line-height: calc(20 / 14);
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+
+.p-reservation__radiobtn {
+  appearance: none;
+  position: relative;
+  width: myrem(35);
+  height: myrem(35);
+  border: 1px solid #707070;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0;
+}
+
+.p-reservation__radiobtn:checked {
+  border-color: $green2;
+}
+
+.p-reservation__radiobtn:checked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: myrem(21);
+  height: myrem(21);
+  margin: auto;
+  border-radius: 50%;
+  background-color: $green2;
+}
+
+
+/*-------------------------------------------
+診療内容のチェックボックス
+-------------------------------------------*/
+.p-reservation__check {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: myrem(11) myrem(15);
+}
+
+.p-reservation__check-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.p-reservation__check-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.p-reservation__check-item span {
+  display: flex;
+  align-items: center;
+  padding-left: myrem(15);
+  height: myrem(50);
+  background-color: #F4F4F4;
+  border-radius: myrem(5);
+  font-size: myrem(16);
+  transition: background-color .3s, color .3s;
+}
+
+.p-reservation__check-item input:checked+span {
+  background-color: $green2;
+  color: $white;
+}
+
+
+.p-reservation__btn {
+  width: myrem(240);
+  margin: myrem(42) auto 0;
+  @include mq(md) {
+    // margin: myrem(55) auto 0;
+  }
+}
+
+.p-reservation__btn .c-btn02--secondary span::before {
+  translate: myrem(64) myrem(-1);
+}
+
+.p-reservation__btn .c-btn02--secondary span::after {
+  translate: myrem(60) myrem(-3);
+}
