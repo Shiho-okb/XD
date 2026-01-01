@@ -1,6 +1,6 @@
 @use 'global' as *;
 
-.l-reservation {
+.l-thanks {
   margin-top: myrem(60);
   @include mq(md) {
     margin-top: myrem(80);

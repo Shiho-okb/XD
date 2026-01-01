@@ -4,8 +4,10 @@
   position: relative;
   overflow: visible;
   padding-top: myrem(39);
+  padding-bottom: myrem(50);
   @include mq(md) {
     padding-top: myrem(99);
+    padding-bottom: myrem(112);
   }
 }
 

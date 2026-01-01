@@ -3,6 +3,10 @@
 .p-treatment {
   position: relative;
   overflow: visible;
+  padding-top: myrem(68);
+  @include mq(md) {
+    padding-top: myrem(75);
+  }
 }
 
 .p-treatment::before {

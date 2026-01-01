@@ -3,6 +3,10 @@
 .p-news {
   position: relative;
   overflow: visible;
+  padding-block: myrem(140) myrem(76);
+  @include mq(md) {
+    padding-block: myrem(55) myrem(59);
+  }
 }
 
 .p-news::before {

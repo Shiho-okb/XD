@@ -3,6 +3,10 @@
 .p-message {
   position: relative;
   overflow: visible;
+  padding-bottom: myrem(70);
+  @include mq(md) {
+    padding-bottom: myrem(138);
+  }
 }
 
 .p-message::before {

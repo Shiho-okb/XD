@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.p-company {
+  padding-bottom: myrem(75);
+  @include mq(md) {
+    padding-bottom: myrem(110);
+  }
+}
+
 .p-company .c-title {
   text-align: center;
   opacity: 0;

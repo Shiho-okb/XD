@@ -1,8 +1,10 @@
 @use "global" as *;
 
 .p-footer {
+  padding-block: myrem(80) myrem(46);
   background: #F8FFFF;
   @include mq(md) {
+    padding-block: myrem(70) myrem(37);
     transition: 0.4s;
   }
 }

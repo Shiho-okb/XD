@@ -3,6 +3,10 @@
 .p-access {
   position: relative;
   overflow: visible;
+  padding-bottom: myrem(70);
+  @include mq(md) {
+    padding-bottom: myrem(112);
+  }
 }
 
 .p-access::before {
