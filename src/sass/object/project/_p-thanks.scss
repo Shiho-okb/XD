@@ -5,8 +5,7 @@
   overflow: visible;
   padding-block: myrem(39) myrem(61);
   @include mq(md) {
-    // padding-top: myrem(99);
-    // padding-bottom: myrem(112);
+    padding-block: myrem(99) myrem(110);
   }
 }
 
@@ -16,11 +15,11 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 14.5%; //あとで確認
+  height: 61.2%;
   background: url(/images/clinic/clinic_01.png) no-repeat center center / cover;
   z-index: -1;
   @include mq(md) {
-    // height: 14.03%;
+    height: 46.3%;
     background: url(/images/clinic/clinic_01PC.png) no-repeat center center / cover;
   }
 }
@@ -39,10 +38,6 @@
   padding-left: myrem(15);
   background-color: $white;
   border-radius: myrem(20);
-  @include mq(md) {
-    // padding-right: myrem(52);
-    // padding-left: myrem(52);
-  }
 }
 
 .p-thanks__wrapper {
@@ -61,15 +56,23 @@
   font-weight: 500;
   display: flex;
   flex-direction: column;
+  @include mq(md) {
+    padding-top: myrem(69);
+    font-size: myrem(32);
+    line-height: calc(46 / 32);
+    flex-direction: row;
+  }
 }
 
 .p-thanks__title::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: myrem(-17);
+  left: 50%;
+  transform: translateX(-50%);
   width: myrem(55);
   height: myrem(4);
   background-color: $green;
-  margin: myrem(13) auto 0;
 }
 
 .p-thanks__text {
@@ -78,18 +81,29 @@
   line-height: calc(29 / 14);
   letter-spacing: .03em;
   font-weight: 500;
-  margin-top: myrem(14);
+  margin-top: myrem(28);
+  @include mq(md) {
+    line-height: calc(34 / 14);
+    letter-spacing: .1em;
+    margin-top: myrem(50);
+  }
 }
 
-.p-thanks__text span {
+.p-thanks__text-row {
+  @include mq(md) {
+  display: inline-flex;
+  }
+}
+
+.p-thanks__text-row span {
   display: block;
 }
 
 .p-thanks__btn {
   width: myrem(240);
-  margin: myrem(38) auto 0;
+  margin: myrem(33) auto 0;
   @include mq(md) {
-    // margin: myrem(40) auto 0;
+    margin: myrem(50) auto 0;
   }
 }
 
