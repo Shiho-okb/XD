@@ -3,11 +3,9 @@
 .p-reservation {
   position: relative;
   overflow: visible;
-  padding-top: myrem(39);
-  padding-bottom: myrem(50);
+  padding-block: myrem(39) myrem(50);
   @include mq(md) {
-    padding-top: myrem(99);
-    padding-bottom: myrem(112);
+    padding-block: myrem(99) myrem(112);
   }
 }
 
@@ -19,7 +17,7 @@
   width: 100%;
   height: 14.5%;
   background: url(/images/clinic/clinic_01.png) no-repeat center center / cover;
-  z-index: -2;
+  z-index: -1;
   @include mq(md) {
     height: 14.03%;
     background: url(/images/clinic/clinic_01PC.png) no-repeat center center / cover;

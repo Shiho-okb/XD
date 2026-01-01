@@ -1,5 +1,102 @@
 @use "global" as *;
 
 .p-thanks {
-  
+  position: relative;
+  overflow: visible;
+  padding-block: myrem(39) myrem(61);
+  @include mq(md) {
+    // padding-top: myrem(99);
+    // padding-bottom: myrem(112);
+  }
+}
+
+.p-thanks::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 14.5%; //あとで確認
+  background: url(/images/clinic/clinic_01.png) no-repeat center center / cover;
+  z-index: -1;
+  @include mq(md) {
+    // height: 14.03%;
+    background: url(/images/clinic/clinic_01PC.png) no-repeat center center / cover;
+  }
+}
+
+.p-thanks__inner {
+  padding-right: myrem(15);
+  padding-left: myrem(15);
+  @include mq(md) {
+    padding-right: myrem(strip-unit($padding-pc));
+    padding-left: myrem(strip-unit($padding-pc));
+  }
+}
+
+.p-thanks__inner02 {
+  padding-right: myrem(15);
+  padding-left: myrem(15);
+  background-color: $white;
+  border-radius: myrem(20);
+  @include mq(md) {
+    // padding-right: myrem(52);
+    // padding-left: myrem(52);
+  }
+}
+
+.p-thanks__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-thanks__title {
+  position: relative;
+  text-align: center;
+  padding-top: myrem(44);
+  font-size: myrem(24);
+  line-height: calc(35 / 24);
+  letter-spacing: .1em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-thanks__title::after {
+  content: "";
+  display: block;
+  width: myrem(55);
+  height: myrem(4);
+  background-color: $green;
+  margin: myrem(13) auto 0;
+}
+
+.p-thanks__text {
+  text-align: center;
+  font-size: myrem(14);
+  line-height: calc(29 / 14);
+  letter-spacing: .03em;
+  font-weight: 500;
+  margin-top: myrem(14);
+}
+
+.p-thanks__text span {
+  display: block;
+}
+
+.p-thanks__btn {
+  width: myrem(240);
+  margin: myrem(38) auto 0;
+  @include mq(md) {
+    // margin: myrem(40) auto 0;
+  }
+}
+
+.p-thanks__btn .c-btn02--secondary span::before {
+  translate: myrem(55) myrem(-1);
+}
+
+.p-thanks__btn .c-btn02--secondary span::after {
+  translate: myrem(51) myrem(-3);
 }
