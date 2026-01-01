@@ -119,237 +119,236 @@
     <!-- 診療WEB予約 -->
     <section class="p-reservation l-reservation">
       <div class="p-reservation__inner l-inner">
-        <h2 class="c-title js-title" data-en="Reservation">
-          診療WEB予約
-        </h2>
-        <!-- 予約フォーム -->
-        <form class="p-reservation__form">
-          <!-- メールアドレス -->
-          <div class="p-reservation__item">
-            <label class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              メールアドレス
-            </label>
-            <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="p-reservation__input"
-            placeholder="例）example@example.com">
-          </div>
-
-          <!-- お名前 -->
-          <div class="p-reservation__item">
-            <label class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              お名前
-            </label>
-            <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            class="p-reservation__input"
-            placeholder="田中　太郎">
-          </div>
-
-          <!-- ふりがな -->
-          <div class="p-reservation__item">
-            <label class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              ふりがな
-            </label>
-            <input
-            type="text"
-            name="furigana"
-            id="furigana"
-            required
-            class="p-reservation__input"
-            placeholder="たなか　たろう">
-          </div>
-
-          <!-- 注意書き -->
-          <span class="p-reservation__text-email">※携帯メールアドレスの場合、迷惑メール対策によりメールが受信できない事例が多発しております。恐れ入りますが、各種携帯電話会社のドメイン制限の解除をお願い致します。</span>
-
-          <!-- 性別 -->
-          <div class="p-reservation__item">
-            <p class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              性別
-            </p>
-            <div class="p-reservation__radio">
-              <label>
-                <input
-                type="radio"
-                name="gender"
-                value="男性"
-                class="p-reservation__radiobtn">
-                男性
+        <div class="p-reservation__inner02">
+          <h2 class="c-title js-title" data-en="Reservation">
+            診療WEB予約
+          </h2>
+          <!-- 予約フォーム -->
+          <form class="p-reservation__form">
+            <!-- メールアドレス -->
+            <div class="p-reservation__item">
+              <label class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                メールアドレス
               </label>
-              <label>
-                <input
-                type="radio"
-                name="gender"
-                value="女性"
-                class="p-reservation__radiobtn">
-                女性
-              </label>
-              <label>
-                <input
-                type="radio"
-                name="gender"
-                value="その他"
-                class="p-reservation__radiobtn">
-                その他
-              </label>
-            </div>
-          </div>
-
-          <!-- 生年月日 -->
-          <div class="p-reservation__item">
-            <label class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              生年月日
-            </label>
-            <input
-            type="text"
-            name="birthdate"
-            id="birthdate"
-            required
-            class="p-reservation__input"
-            placeholder="例）19800101">
-          </div>
-
-          <!-- 当院での受診 -->
-          <div class="p-reservation__item">
-            <p class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              当院での受診
-            </p>
-            <div class="p-reservation__radio p-reservation__radio--visit">
-              <label>
-                <input
-                type="radio"
-                name="visit"
-                value="初めて"
-                class="p-reservation__radiobtn">
-                初めて
-              </label>
-              <label>
-                <input
-                type="radio"
-                name="visit"
-                value="2回目以降"
-                class="p-reservation__radiobtn">
-                2回目以降
-              </label>
-            </div>
-          </div>
-
-          <!-- 診療内容 -->
-          <div class="p-reservation__item">
-            <p class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              診療内容を選択してください。
-            </p>
-            <div class="p-reservation__check">
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="虫歯">
-                <span>虫歯</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="顎関節症">
-                <span>顎関節症</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="一般矯正">
-                <span>一般矯正</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="歯科検診">
-                <span>歯科検診</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="口臭">
-                <span>口臭</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="入れ歯・義歯">
-                <span>入れ歯・義歯</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="歯科口腔外科">
-                <span>歯科口腔外科</span>
-              </label>
-              <label class="p-reservation__check-item">
-                <input
-                type="checkbox"
-                name="treatment"
-                value="噛み合わせ">
-                <span>噛み合わせ</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- 担当医へのメッセージ -->
-          <div class="p-reservation__item p-reservation__item--message">
-            <label class="p-reservation__label">
-              <span class="p-reservation__required">必須</span>
-              担当医へのメッセージ
-            </label>
-            <span class="p-reservation__text-message">※担当医へのメッセージ、電話がつながりやすい時間があればこの欄にご記入ください。</span>
-            <textarea
-            name="message"
-            id="message"
-            required
-            class="p-reservation__textarea"
-            ></textarea>
-            <label class="p-reservation__text-privacy">
               <input
-              type="checkbox"
-              name="privacy"
-              id="privacy"
-              required>
-              <span>
-                <a href="#" target="_blank" rel="noopener">
-                  個人情報保護方針
-                </a>
-                に同意のうえ、ご送信ください。
-              </span>
-            </label>
-          </div>
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="p-reservation__input"
+              placeholder="例）example@example.com">
+            </div>
 
-          <!-- 送信するボタン -->
-          <div class="p-reservation__btn">
-            <a href="#" class="c-btn02 c-btn02--secondary">
-              送信する
-              <span></span>
-            </a>
-          </div>
+            <!-- お名前 -->
+            <div class="p-reservation__item">
+              <label class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                お名前
+              </label>
+              <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              class="p-reservation__input"
+              placeholder="田中　太郎">
+            </div>
 
-        </form>
+            <!-- ふりがな -->
+            <div class="p-reservation__item">
+              <label class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                ふりがな
+              </label>
+              <input
+              type="text"
+              name="furigana"
+              id="furigana"
+              required
+              class="p-reservation__input"
+              placeholder="たなか　たろう">
+            </div>
+
+            <!-- 注意書き -->
+            <span class="p-reservation__text-email">※携帯メールアドレスの場合、迷惑メール対策によりメールが受信できない事例が多発しております。恐れ入りますが、各種携帯電話会社のドメイン制限の解除をお願い致します。</span>
+
+            <!-- 性別 -->
+            <div class="p-reservation__item">
+              <p class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                性別
+              </p>
+              <div class="p-reservation__radio">
+                <label>
+                  <input
+                  type="radio"
+                  name="gender"
+                  value="男性"
+                  class="p-reservation__radiobtn">
+                  男性
+                </label>
+                <label>
+                  <input
+                  type="radio"
+                  name="gender"
+                  value="女性"
+                  class="p-reservation__radiobtn">
+                  女性
+                </label>
+                <label>
+                  <input
+                  type="radio"
+                  name="gender"
+                  value="その他"
+                  class="p-reservation__radiobtn">
+                  その他
+                </label>
+              </div>
+            </div>
+
+            <!-- 生年月日 -->
+            <div class="p-reservation__item">
+              <label class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                生年月日
+              </label>
+              <input
+              type="text"
+              name="birthdate"
+              id="birthdate"
+              required
+              class="p-reservation__input"
+              placeholder="例）19800101">
+            </div>
+
+            <!-- 当院での受診 -->
+            <div class="p-reservation__item">
+              <p class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                当院での受診
+              </p>
+              <div class="p-reservation__radio p-reservation__radio--visit">
+                <label>
+                  <input
+                  type="radio"
+                  name="visit"
+                  value="初めて"
+                  class="p-reservation__radiobtn">
+                  初めて
+                </label>
+                <label>
+                  <input
+                  type="radio"
+                  name="visit"
+                  value="2回目以降"
+                  class="p-reservation__radiobtn">
+                  2回目以降
+                </label>
+              </div>
+            </div>
+
+            <!-- 診療内容 -->
+            <div class="p-reservation__item">
+              <p class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                診療内容を選択してください。
+              </p>
+              <div class="p-reservation__check">
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="虫歯">
+                  <span>虫歯</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="顎関節症">
+                  <span>顎関節症</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="一般矯正">
+                  <span>一般矯正</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="歯科検診">
+                  <span>歯科検診</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="口臭">
+                  <span>口臭</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="入れ歯・義歯">
+                  <span>入れ歯・義歯</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="歯科口腔外科">
+                  <span>歯科口腔外科</span>
+                </label>
+                <label class="p-reservation__check-item">
+                  <input
+                  type="checkbox"
+                  name="treatment"
+                  value="噛み合わせ">
+                  <span>噛み合わせ</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 担当医へのメッセージ -->
+            <div class="p-reservation__item p-reservation__item--message">
+              <label class="p-reservation__label">
+                <span class="p-reservation__required">必須</span>
+                担当医へのメッセージ
+              </label>
+              <span class="p-reservation__text-message">※担当医へのメッセージ、電話がつながりやすい時間があればこの欄にご記入ください。</span>
+              <textarea
+              name="message"
+              id="message"
+              required
+              class="p-reservation__textarea"
+              ></textarea>
+              <label class="p-reservation__text-privacy">
+                <input
+                type="checkbox"
+                name="privacy"
+                id="privacy"
+                required>
+                <span>
+                  <a href="#" target="_blank" rel="noopener">個人情報保護方針</a>に同意のうえ、ご送信ください。
+                </span>
+              </label>
+            </div>
+
+            <!-- 送信するボタン -->
+            <div class="p-reservation__btn">
+              <a href="#" class="c-btn02 c-btn02--secondary">
+                送信する
+                <span></span>
+              </a>
+            </div>
+
+          </form>
+        </div>
       </div>
     </section>
   </main>
