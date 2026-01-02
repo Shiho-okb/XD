@@ -27,34 +27,20 @@
 }
 
 .p-header__logo {
-  display: block;
-  position: relative;
-  width: calc(190 / 375 * 100%);
-  z-index: 44;
+  font-size: myrem(16);
+  letter-spacing: .1em;
+  font-weight: 100;
+  height: inherit;
   @include mq(md) {
-    width: calc(435 / 1400 * 100%);
-    height: inherit;
-    transition: 0.4s;
-    padding-inline: calc(102 / 1400 * 100vw) 0;
+    font-size: calc(28 / 1400 * 100vw);
+    margin-left: auto;
   }
 }
 
-.p-header__logo-image {
-  width: 100%;
-  @include mq(md) {
-    width: calc(333 / 1400 * 100%);
-    transition: 0.4s;
-  }
-}
-
-.p-header__logo-image img {
-  aspect-ratio: 190/24;
-  width: 100%;
+.p-header__logo a {
+  display: flex;
+  align-items: center;
   height: 100%;
-  object-fit: contain;
-  @include mq(md) {
-    aspect-ratio: 333/40;
-  }
 }
 
 .p-header__hamburger {
