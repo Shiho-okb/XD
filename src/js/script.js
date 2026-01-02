@@ -75,7 +75,16 @@ jQuery(function ($) {
 
     /* ===== 追従ボタン用 ===== */
     const fixedBtn = $(".js-fixed");
-    if (wScroll > 100) {
+    const footer = $(".js-footer");
+
+    if (!footer.length) return;
+
+    const footerTop = footer.offset().top;
+    const fixedBtnHeight = fixedBtn.outerHeight();
+    const windowBottom = wScroll + wHeight;
+
+    // 表示条件
+    if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
       fixedBtn.addClass("is-show");
     } else {
       fixedBtn.removeClass("is-show");

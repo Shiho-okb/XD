@@ -8,8 +8,12 @@
   transform: rotate(-7deg);
   position: absolute;
   z-index: 2;
-  top: 10%;
-  left: 5%;
+  top: 8%;
+  left: 6%;
+  @include mq(md) {
+    top: 9%;
+    left: 8.5%;
+  }
 }
 
 .p-mainvisual__title {
@@ -24,8 +28,6 @@
   @include mq(md) {
     font-size: calc(52 / 1400 * 100vw);
     line-height: calc(130 / 52);
-    top: 9%;
-    left: 8.5%;
   }
 }
 
