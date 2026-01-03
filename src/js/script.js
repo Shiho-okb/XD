@@ -46,10 +46,9 @@ jQuery(function ($) {
   });
 
   // ハンバーガーメニュー内リンク
-  $('.p-header-nav-item__link').on('click', function () {
-    // closeDrawer();
+  $('.p-header-nav-item__link, .p-header-dropmenu__link').on('click', function () {
     $('.js-hamburger').toggleClass('is-active');
-    $("body").toggleClass("active");
+    $('body').toggleClass('active');
     $('.js-drawer').fadeToggle();
   });
 

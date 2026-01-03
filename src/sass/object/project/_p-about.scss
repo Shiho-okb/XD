@@ -21,6 +21,10 @@
   }
 }
 
+.p-about__inner {
+  overflow: hidden;
+}
+
 .p-about__wrapper {
   @include mq(md) {
     display: flex;

@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.p-mainvisual__inner {
+  overflow: hidden;
+}
+
 .p-mainvisual__titlebox {
   transform: rotate(-7deg);
   position: absolute;
