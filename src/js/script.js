@@ -1,7 +1,7 @@
 
 jQuery(function ($) {
 
-  // ページトップボタン
+  /* ===== ページトップボタン ===== */
   var topBtn = $('.js-pagetop');
   topBtn.hide();
 
@@ -24,7 +24,8 @@ jQuery(function ($) {
     return false;
   });
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。)
+
+  /* ===== スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。) ===== */
   $(document).on('click', 'a[href*="#"]', function () {
     let time = 400;
     let header = $('header').innerHeight();
@@ -35,7 +36,8 @@ jQuery(function ($) {
     return false;
   });
 
-  // ハンバーガーメニュー
+
+  /* ===== ハンバーガーメニュー ===== */
   $('.js-hamburger').on('click', function (e) {
     e.stopPropagation();
     $(this).toggleClass('is-active');
@@ -43,7 +45,16 @@ jQuery(function ($) {
     $('.js-drawer').fadeToggle();
   });
 
-  // アコーディオン
+  // ハンバーガーメニュー内リンク
+  $('.p-header-nav-item__link').on('click', function () {
+    // closeDrawer();
+    $('.js-hamburger').toggleClass('is-active');
+    $("body").toggleClass("active");
+    $('.js-drawer').fadeToggle();
+  });
+
+
+  /* ===== アコーディオン ===== */
   $(function () {
     $(".js-accordion").on("click", function () {
       const $target = $(this).closest(".p-header-nav-item").find(".p-header-dropmenu");
@@ -52,51 +63,52 @@ jQuery(function ($) {
     });
   });
 
-  // フェードイン
+
+  /* ===== フェードイン ===== */
   $(function () {
-  function checkFadeIn() {
-    const wHeight = $(window).height();
-    const wScroll = $(window).scrollTop();
+    function checkFadeIn() {
+      const wHeight = $(window).height();
+      const wScroll = $(window).scrollTop();
 
-    /* ===== 通常フェードイン ===== */
-    const targets = [
-      ".js-mainvisual__textbox",
-      ".js-mainvisual__title",
-      ".js-image",
-      ".js-subtitle",
-      ".js-title"
-    ].join(", ");
-    $(targets).each(function () {
-      const bPosition = $(this).offset().top;
-      if (wScroll > bPosition - wHeight + 200) {
-        $(this).addClass("u-fadeIn");
+      // 通常フェードイン
+      const targets = [
+        ".js-mainvisual__textbox",
+        ".js-mainvisual__title",
+        ".js-image",
+        ".js-subtitle",
+        ".js-title"
+      ].join(", ");
+      $(targets).each(function () {
+        const bPosition = $(this).offset().top;
+        if (wScroll > bPosition - wHeight + 200) {
+          $(this).addClass("u-fadeIn");
+        }
+      });
+
+      // 追従ボタン用
+      const fixedBtn = $(".js-fixed");
+      const footer = $(".js-footer");
+
+      if (!footer.length) return;
+      const footerTop = footer.offset().top;
+      const fixedBtnHeight = fixedBtn.outerHeight();
+      const windowBottom = wScroll + wHeight;
+
+      // 表示条件
+      if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
+        fixedBtn.addClass("is-show");
+      } else {
+        fixedBtn.removeClass("is-show");
       }
-    });
-
-    /* ===== 追従ボタン用 ===== */
-    const fixedBtn = $(".js-fixed");
-    const footer = $(".js-footer");
-
-    if (!footer.length) return;
-
-    const footerTop = footer.offset().top;
-    const fixedBtnHeight = fixedBtn.outerHeight();
-    const windowBottom = wScroll + wHeight;
-
-    // 表示条件
-    if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
-      fixedBtn.addClass("is-show");
-    } else {
-      fixedBtn.removeClass("is-show");
     }
-  }
 
     // 初期表示
     $(window).on("scroll", checkFadeIn);
     checkFadeIn();
   });
 
-  // スワイパー
+
+  /* ===== スワイパー ===== */
   const swiper = new Swiper(".swiper", {
     loop: true,
     speed: 1500,

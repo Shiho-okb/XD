@@ -31,9 +31,12 @@
   letter-spacing: .1em;
   font-weight: 100;
   height: inherit;
+  position: relative;
+  z-index: 44;
   @include mq(md) {
     font-size: calc(28 / 1400 * 100vw);
     margin-left: auto;
+    transition: 0.4s;
   }
 }
 

@@ -27,12 +27,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Script&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <!-- css -->
-  <link rel="stylesheet" href="../css/styles.min.css">
+  <link rel="stylesheet" href="/css/styles.min.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script defer src="../js/script.min.js"></script>
+  <script defer src="/js/script.min.js"></script>
 </head>
 
 <body>
@@ -54,32 +54,32 @@
           <div class="p-header__nav-wrapper">
             <ul class="p-header__nav-list">
               <li class="p-header__nav-item p-header-nav-item">
-                <a href="#" class="p-header-nav-item__link">新着情報</a>
+                <a href="/index.html#news" class="p-header-nav-item__link">新着情報</a>
               </li>
               <li class="p-header__nav-item p-header-nav-item">
-                <a href="#" class="p-header-nav-item__link">診察内容</a>
+                <a href="/index.html#treatment" class="p-header-nav-item__link">診療内容</a>
               </li>
               <li class="p-header__nav-item p-header-nav-item">
-                <a href="#" class="p-header-nav-item__link">治療の流れ</a>
+                <a href="/index.html#flow" class="p-header-nav-item__link">治療の流れ</a>
               </li>
               <li class="p-header__nav-item p-header-nav-item">
                 <div class="p-header-nav-item__accordion">
-                  <a href="./about.html" class="p-header-nav-item__link">当院について</a>
+                  <a href="/about/index.html" class="p-header-nav-item__link">当院について</a>
                   <span class="p-header-nav-item__toggle js-accordion"></span>
                 </div>
                 <ul class="p-header__dropmenu p-header-dropmenu">
                   <li class="p-header-dropmenu__item">
-                    <a href="./about.html#about" class="p-header-dropmenu__link">
+                    <a href="/about/index.html#clinic" class="p-header-dropmenu__link">
                       <span>院長挨拶</span>
                     </a>
                   </li>
                   <li class="p-header-dropmenu__item">
-                    <a href="./about.html#facility" class="p-header-dropmenu__link">
+                    <a href="/about/index.html#facility" class="p-header-dropmenu__link">
                       <span>設備紹介</span>
                     </a>
                   </li>
                   <li class="p-header-dropmenu__item">
-                    <a href="./about.html#company" class="p-header-dropmenu__link">
+                    <a href="/about/index.html#company" class="p-header-dropmenu__link">
                       <span>会社概要</span>
                     </a>
                   </li>
@@ -91,7 +91,7 @@
                 <a href="tel:03-0000-0000">
                   <div class="p-header__btnitem--phonenumber__textbox">
                     <div class="p-header__btnitem--phonenumber__img">
-                      <img src="./images/header/icon_02.png" alt="電話のロゴ" width="15" height="21">
+                      <img src="/images/header/icon_02.png" alt="電話のロゴ" width="15" height="21">
                     </div>
                     <span class="p-header__btnitem--phonenumber__text01">TEL.</span><span class="p-header__btnitem--phonenumber__text02">03-0000-0000</span>
                   </div>
@@ -100,9 +100,9 @@
                 </a>
               </li>
               <li class="p-header__btnitem p-header__btnitem--reservation">
-                <a href="./reservation.html">
+                <a href="/contact/index.html">
                   <div class="p-header__btnitem--reservation__img">
-                    <img src="./images/header/icon_01.png" alt="カレンダーのロゴ" width="30" height="32">
+                    <img src="/images/header/icon_01.png" alt="カレンダーのロゴ" width="30" height="32">
                   </div>
                   Web予約
                 </a>
@@ -117,7 +117,7 @@
   <!-- メインエリア -->
   <main>
     <!-- 当院について -->
-    <section class="p-clinic l-clinic">
+    <section class="p-clinic l-clinic" id="clinic">
       <div class="p-clinic__inner l-inner">
         <div class="p-clinic__inner02">
           <!-- パンくずリスト -->
@@ -200,7 +200,7 @@
     </section>
 
     <!-- 設備紹介 -->
-    <section class="p-facility l-facility">
+    <section class="p-facility l-facility" id="facility">
       <div class="p-facility__inner l-inner">
         <h2 class="c-title js-title" data-en="Facility">
           設備紹介
@@ -271,7 +271,7 @@
     </section>
 
     <!-- 会社概要 -->
-    <section class="p-company l-company">
+    <section class="p-company l-company" id="company">
       <div class="p-company__inner l-inner">
         <h2 class="c-title js-title" data-en="Company overview">
           会社概要
