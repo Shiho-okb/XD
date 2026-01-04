@@ -116,10 +116,10 @@ jQuery(function ($) {
     centeredSlides: true,
 
     // 自動再生
-    // autoplay: {
-    //   delay: 1000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
 
     // 前後の矢印
     navigation: {

@@ -324,7 +324,7 @@
   gap: myrem(10);
   width: 100%;
   @include mq(md) {
-    width: calc(382 /965 * 100%);
+    width: calc(382 / 965 * 100%);
     flex-direction: row;
     height: inherit;
     gap: initial;
