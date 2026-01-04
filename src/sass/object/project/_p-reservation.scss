@@ -97,6 +97,7 @@
   color: $white;
   font-size: myrem(12);
   letter-spacing: .1em;
+  font-weight: 500;
   padding: myrem(5) myrem(10);
 }
 
@@ -162,10 +163,11 @@
 
 .p-reservation__text-privacy {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-top: myrem(11);
   letter-spacing: .04em;
+  gap: myrem(10);
   cursor: pointer;
   @include mq(md) {
     justify-content: center;

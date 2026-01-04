@@ -28,6 +28,7 @@
   padding-right: myrem(15);
   padding-left: myrem(15);
   @include mq(md) {
+    max-width: myrem(1200);
     padding-right: myrem(strip-unit($padding-pc));
     padding-left: myrem(strip-unit($padding-pc));
   }
@@ -244,7 +245,7 @@
   left: 0;
 }
 
-.p-clinic__underline {
+.p-clinic__underline a {
   text-decoration: underline;
   text-underline-offset: myrem(2);
 }

@@ -5,7 +5,7 @@
   background: #F8FFFF;
   @include mq(md) {
     padding-block: myrem(70) myrem(37);
-    transition: 0.4s;
+    transition: .4s;
   }
 }
 
@@ -84,7 +84,7 @@
   @include mq(md) {
     padding-block: myrem(10) myrem(5);
     letter-spacing: 0.1em;
-    transition: 0.4s;
+    transition: .4s;
   }
 }
 

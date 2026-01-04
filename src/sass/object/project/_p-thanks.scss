@@ -77,12 +77,13 @@
 
 .p-thanks__text {
   text-align: center;
-  font-size: myrem(14);
+  font-size: clamp(12px, 1.8vw, 14px);
   line-height: calc(29 / 14);
   letter-spacing: .03em;
   font-weight: 500;
   margin-top: myrem(28);
   @include mq(md) {
+    font-size: myrem(14);
     line-height: calc(34 / 14);
     letter-spacing: .1em;
     margin-top: myrem(50);
@@ -91,7 +92,7 @@
 
 .p-thanks__text-row {
   @include mq(md) {
-  display: inline-flex;
+    display: inline-flex;
   }
 }
 

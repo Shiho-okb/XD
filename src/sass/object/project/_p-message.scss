@@ -28,6 +28,9 @@
 
 .p-message__inner {
   overflow: hidden;
+  @include mq(md) {
+    overflow: inherit;
+  }
 }
 
 .p-message__wrapper {

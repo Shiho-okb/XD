@@ -23,6 +23,9 @@
 
 .p-about__inner {
   overflow: hidden;
+  @include mq(md) {
+    overflow: inherit;
+  }
 }
 
 .p-about__wrapper {
