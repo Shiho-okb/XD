@@ -17,12 +17,12 @@
   bottom: 0;
   left: 0;
   width: 69%;
-  background: url(./images/message/message_05.png) no-repeat center center / cover;
+  background: url(../images/message/message_05.png) no-repeat center center / cover;
   z-index: -1;
   @include mq(md) {
     top: myrem(180);
     width: 64%;
-    background: url(./images/message/message_05PC.png) no-repeat center center / cover;
+    background: url(../images/message/message_05PC.png) no-repeat center center / cover;
   }
 }
 
