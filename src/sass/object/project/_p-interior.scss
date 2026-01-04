@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.p-interior__wrapper {
+  overflow: hidden;
+}
+
 .p-interior .c-title {
   text-align: center;
   opacity: 0;
