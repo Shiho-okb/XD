@@ -36,6 +36,7 @@
     font-size: myrem(19);
     line-height: calc(29 / 19);
     margin-top: myrem(10);
+    white-space: nowrap;
   }
 }
 
@@ -58,6 +59,7 @@
   @include mq(md) {
     flex-direction: row;
     gap: calc(34 / 1400 * 100vw);;
+    flex-wrap: nowrap;
   }
 }
 
@@ -85,6 +87,7 @@
     padding-block: myrem(10) myrem(5);
     letter-spacing: 0.1em;
     transition: .4s;
+    white-space: nowrap;
   }
 }
 
