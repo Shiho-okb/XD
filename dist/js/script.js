@@ -46,10 +46,20 @@ jQuery(function ($) {
   });
 
   // ハンバーガーメニュー内リンク
+  let isSp = window.matchMedia('(max-width: 767px)').matches;
+
   $('.p-header-nav-item__link, .p-header-dropmenu__link').on('click', function () {
+    // pc時は処理をしせず終了
+    if (!isSp) return;
+
     $('.js-hamburger').toggleClass('is-active');
     $('body').toggleClass('active');
     $('.js-drawer').fadeToggle();
+  });
+
+  // リサイズした際に、isSpを更新する
+  window.addEventListener('resize', function () {
+    isSp = window.matchMedia('(max-width: 767px)').matches;
   });
 
 
