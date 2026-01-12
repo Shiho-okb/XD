@@ -63,6 +63,7 @@
 
 /* 前への矢印 */
 .p-interior .swiper-button-prev {
+  left: myrem(15);
   @include mq(md) {
     left: auto;
     right: calc(260 / 1400 * 100%);
@@ -73,6 +74,7 @@
 
 /* 次への矢印 */
 .p-interior .swiper-button-next {
+  right: myrem(15);
   @include mq(md) {
     right: calc(200 / 1400 * 100%);
     top: 99%;
@@ -85,7 +87,7 @@
   width: myrem(18);
   height: myrem(18);
   @include mq(md) {
-    height: calc(21 / 1400 * 100vw);
     width: calc(21 / 1400 * 100vw);
+    height: calc(21 / 1400 * 100vw);
   }
 }
