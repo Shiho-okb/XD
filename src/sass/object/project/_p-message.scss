@@ -44,21 +44,21 @@
   top: 12.5%;
   right: 1%;
   @include mq(md) {
-    top: 8.5%;
-    right: 4.5%;
+    top: 9.5%;
+    right: 5.5%;
   }
 }
 
 .p-message__title {
   display: inline-block;
-  font-size: clamp(50px, 6.5vw, 100px);
+  font-size: clamp(50px, 10.4vw, 80px);
   line-height: calc(126 / 50);
   letter-spacing: 0;
   color: $green;
   font-family: $font-sub;
   opacity: 0.4;
   @include mq(md) {
-    font-size: calc(52 / 1400 * 100vw);
+    font-size: clamp(30px, 3.6vw, 52px);
     line-height: calc(130 / 52);
   }
 }
@@ -80,7 +80,7 @@
   @include mq(md) {
     width: 100%;
     margin-top: 0;
-    max-width: myrem(660);
+    max-width: clamp(422px, 49vw, 660px);
   }
 }
 
