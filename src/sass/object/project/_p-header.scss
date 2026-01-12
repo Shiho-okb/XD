@@ -200,6 +200,7 @@
 -------------------------------------------*/
 .p-header-nav-item__accordion {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba($green2, 0.4);
   @include mq(md) {
@@ -214,7 +215,6 @@
 
 .p-header-nav-item__toggle {
   position: relative;
-  padding: myrem(20);
   @include mq(md) {
     display: none;
   }
@@ -229,7 +229,6 @@
   height: myrem(13);
   width: myrem(13);
   right: myrem(12);
-  top: 50%;
   transform: translateY(-50%) rotate(135deg);
   transition: transform .3s;
 }

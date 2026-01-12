@@ -104,19 +104,27 @@
 .p-reservation__input,
 .p-reservation__textarea {
   width: 100%;
-  padding: myrem(10) myrem(24) myrem(10);
-  border: none;
+  padding: myrem(8) myrem(24);
+  border: 2px solid transparent;
   background: $green3;
   border-radius: myrem(10);
   font-size: myrem(14);
   line-height: calc(20 / 14);
   letter-spacing: .1em;
+  transition: border-color .3s ease;
   @include mq(md) {
-    padding: myrem(19) myrem(24);
+    padding: myrem(16) myrem(21);
+    border: 3px solid transparent;
     border-radius: myrem(20);
     font-size: myrem(16);
     line-height: calc(24 / 16);
   }
+}
+
+.p-reservation__input:focus,
+.p-reservation__textarea:focus {
+  outline: none;
+  border-color: $green;
 }
 
 .p-reservation__textarea {
