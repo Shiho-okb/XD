@@ -48,7 +48,7 @@ jQuery(function ($) {
   // ハンバーガーメニュー内リンク
   let isSp = window.matchMedia('(max-width: 767px)').matches;
 
-  $('.p-header-nav-item__link, .p-header-dropmenu__link').on('click', function () {
+  $('.p-header-nav-item__link[href], .p-header-dropmenu__link').on('click', function () {
     // pc時は処理をしせず終了
     if (!isSp) return;
 
