@@ -31,12 +31,13 @@
   font-size: myrem(14);
   line-height: calc(24 / 14);
   letter-spacing: .03em;
-  text-align-last: left;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: left;
   @include mq(md) {
+    letter-spacing: .025em;
     -webkit-line-clamp: 3;
   }
 }
