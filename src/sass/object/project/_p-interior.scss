@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-interior__wrapper {
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .p-interior .c-title {
@@ -15,7 +15,7 @@
   margin-top: myrem(27);
   @include mq(md) {
     margin-top: myrem(38);
-    padding-bottom: myrem(60);
+    padding-bottom: calc(60 / 1400 * 100vw);
     overflow: visible;
   }
 }
