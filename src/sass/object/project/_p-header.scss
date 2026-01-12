@@ -406,7 +406,7 @@
 }
 
 .p-header__btnitem--phonenumber__img {
-  width: myrem(15);
+  width: myrem(16);
   @include mq(md) {
     display: none;
   }
@@ -415,8 +415,7 @@
 .p-header__btnitem--phonenumber__img img {
   width: 100%;
   height: auto;
-  aspect-ratio: 15/21;
-  object-fit: cover;
+  aspect-ratio: 16/21;
 }
 
 .p-header__btnitem--phonenumber__text03 {
@@ -462,12 +461,13 @@ Web予約ボタン
 
 .p-header__btnitem--reservation a {
   display: flex;
+  align-items: center;
   font-size: myrem(22);
   font-weight: 500;
   line-height: calc(32 / 22);
   letter-spacing: .1em;
   gap: myrem(19.5);
-  padding: myrem(19) myrem(88) myrem(19) myrem(76);
+  padding: myrem(19) myrem(87) myrem(19) myrem(76);
   @include mq(md) {
     font-size: clamp(10px, 1.2vw, 18px);
     font-weight: 700;
@@ -479,7 +479,7 @@ Web予約ボタン
 }
 
 .p-header__btnitem--reservation__img {
-  width: myrem(30);
+  width: myrem(31);
   @include mq(md) {
     display: none;
   }
@@ -488,8 +488,7 @@ Web予約ボタン
 .p-header__btnitem--reservation__img img {
   width: 100%;
   height: auto;
-  aspect-ratio: 30/32;
-  object-fit: cover;
+  aspect-ratio: 31/32;
 }
 
 
