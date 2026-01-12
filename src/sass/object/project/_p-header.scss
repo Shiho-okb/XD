@@ -344,13 +344,6 @@
   }
 }
 
-.p-header__btnitem:hover {
-  @include mq(md) {
-    opacity: 0.6;
-    cursor: pointer;
-  }
-}
-
 
 /*-------------------------------------------
 電話番号ボタン
@@ -375,6 +368,8 @@
   @include mq(md) {
     align-items: flex-end;
     padding: myrem(20) calc(25 / 1400 * 100vw) myrem(11) calc(25 / 1400 * 100vw);
+    pointer-events: none;
+    cursor: default;
   }
 }
 
@@ -455,6 +450,13 @@ Web予約ボタン
     height: inherit;
     width: calc(120 / 382 * 100%);
     order: 2;
+  }
+}
+
+.p-header__btnitem--reservation:hover {
+  @include mq(md) {
+    opacity: 0.6;
+    cursor: pointer;
   }
 }
 
