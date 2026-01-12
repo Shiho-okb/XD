@@ -31,7 +31,7 @@ body {
 }
 
 // ホバー
-a,
+a:not(.c-card),
 button {
   @include mq(md) {
     transition: .3s;

@@ -15,6 +15,14 @@
     gap: myrem(16);
     padding-top: myrem(16);
     padding-bottom: myrem(9);
+    transition: color 0.3s ease;
+  }
+}
+
+.c-card:hover {
+  @include mq(md) {
+    color: rgba($black, 0.7);
+    cursor: pointer;
   }
 }
 
@@ -31,4 +39,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  @include mq(md) {
+    width: myrem(250);
+  }
 }
