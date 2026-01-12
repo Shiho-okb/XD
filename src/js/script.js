@@ -89,8 +89,13 @@ jQuery(function ($) {
       ].join(", ");
       $(targets).each(function () {
         const bPosition = $(this).offset().top;
+
         if (wScroll > bPosition - wHeight + 200) {
-          $(this).addClass("u-fadeIn");
+          if ($(this).hasClass("js-mainvisual__title")) {
+            $(this).addClass("u-fadeIn--title");
+          } else {
+            $(this).addClass("u-fadeIn");
+          }
         }
       });
 
