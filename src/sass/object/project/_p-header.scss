@@ -7,11 +7,15 @@
     height: myrem(80);
     transition: .4s;
   }
+  @include mq(xl) {
+    height: calc(80 / 1400 * 100vw);
+  }
 }
 
 .p-header__inner {
   padding-left: myrem(15);
   @include mq(md) {
+    height: 100%;
     padding-left: 0;
   }
 }
@@ -21,7 +25,7 @@
   display: flex;
   justify-content: space-between;
   @include mq(md) {
-    height: myrem(80);
+    height: 100%;
     align-items: center;
   }
 }
@@ -100,7 +104,7 @@
     display: flex;
     position: static;
     height: inherit;
-    width: calc(965 / 1400 * 100%);
+    width: calc(965 / 1400 * 100vw);
     padding: 0;
     align-items: center;
     background-color: transparent;
@@ -133,7 +137,7 @@
   @include mq(md) {
     order: initial;
     display: flex;
-    width: calc(583 / 965 * 100%);
+    width: calc(583 / 965 * 100vw);
     height: inherit;
     justify-content: flex-end;
     margin-top: initial;
@@ -323,7 +327,7 @@
   gap: myrem(10);
   width: 100%;
   @include mq(md) {
-    width: calc(382 / 965 * 100%);
+    width: calc(382 / 965 * 100vw);
     flex-direction: row;
     height: inherit;
     gap: initial;
@@ -398,7 +402,7 @@
   line-height: calc(37 / 26);
   letter-spacing: .027em;
   @include mq(md) {
-    font-size: clamp(14px, 1.8vw, 26px);
+    font-size: calc(26 / 1400 * 100vw);
     line-height: calc(26 / 26);
     letter-spacing: 0;
   }
@@ -431,7 +435,7 @@
   display: none;
   @include mq(md) {
     display: block;
-    font-size: clamp(9px, 1.2vw, 12px);
+    font-size: calc(12 / 1400 * 100vw);
   }
 }
 
@@ -468,7 +472,7 @@ Web予約ボタン
   gap: myrem(19.5);
   padding: myrem(19) myrem(87) myrem(19) myrem(76);
   @include mq(md) {
-    font-size: clamp(10px, 1.2vw, 18px);
+    font-size: calc(18 / 1400 * 100vw);
     font-weight: 700;
     line-height: calc(18 / 18);
     padding: myrem(28) calc(16 / 1400 * 100vw) myrem(28) calc(18 / 1400 * 100vw);
