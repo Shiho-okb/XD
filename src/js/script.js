@@ -145,7 +145,10 @@ jQuery(function ($) {
     // レスポンシブ設定
     breakpoints: {
       768: {
-        slidesPerView: '3.32',
+        slidesPerView: 3.32,
+        spaceBetween: -10,
+      },
+      1400: {
         spaceBetween: -20,
       },
     },
