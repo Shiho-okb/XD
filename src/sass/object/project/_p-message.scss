@@ -132,24 +132,31 @@
 }
 
 .p-message__text {
-  margin-top: myrem(15);
+  max-width: myrem(600);
+  margin: myrem(15) auto 0;
   font-size: myrem(14);
   line-height: calc(24 / 14);
   letter-spacing: .03em;
   order: 3;
   @include mq(md) {
-    margin-top: myrem(40);
+    max-width: $innerWidth + $padding-pc * 2;
+    margin: myrem(40) auto 0;
   }
 }
 
 .p-message__card04 {
+  max-width: myrem(600);
   counter-reset: number-m 0;
-  margin-top: myrem(47);
+  margin: myrem(7) auto 0;
   @include mq(md) {
-    margin-top: myrem(40);
+    max-width: $innerWidth + $padding-pc * 2;
+    margin: myrem(40) auto 0;
   }
 }
 
 .p-message .c-card04 {
   margin-top: myrem(30);
+  @include mq(md) {
+    margin-top: myrem(40);
+  }
 }

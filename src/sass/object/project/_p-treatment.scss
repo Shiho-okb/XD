@@ -24,6 +24,13 @@
   }
 }
 
+.p-treatment__inner {
+  max-width: myrem(600);
+  @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
+  }
+}
+
 .p-treatment__wrapper {
   @include mq(md) {
     display: flex;

@@ -9,6 +9,13 @@
   }
 }
 
+.p-footer__inner {
+  max-width: myrem(600);
+  @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
+  }
+}
+
 .p-footer__wrapper {
   display: flex;
   flex-direction: column;

@@ -25,9 +25,11 @@
 }
 
 .p-reservation__inner {
+  max-width: myrem(600);
   padding-right: myrem(15);
   padding-left: myrem(15);
   @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
     padding-right: myrem(strip-unit($padding-pc));
     padding-left: myrem(strip-unit($padding-pc));
   }

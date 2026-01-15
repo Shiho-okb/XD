@@ -7,6 +7,13 @@
   }
 }
 
+.p-company__inner {
+  max-width: myrem(600);
+  @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
+  }
+}
+
 .p-company .c-title {
   text-align: center;
   opacity: 0;

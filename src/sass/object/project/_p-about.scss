@@ -22,8 +22,10 @@
 }
 
 .p-about__inner {
+  max-width: myrem(600);
   overflow: hidden;
   @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
     overflow: inherit;
   }
 }

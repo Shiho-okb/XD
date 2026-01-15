@@ -25,6 +25,7 @@
 }
 
 .p-clinic__inner {
+  max-width: myrem(600);
   padding-right: myrem(15);
   padding-left: myrem(15);
   @include mq(md) {
