@@ -17,17 +17,17 @@
 
 .p-flow__cards {
   counter-reset: number 0;
-    max-width: myrem(500);
-    margin-inline: auto;
-    margin-top: myrem(28);
-    @include mq(md) {
-      min-width: myrem(800);
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(myrem(180), 1fr));
-      gap: myrem(26);
-      margin-inline: myrem(24) 0;
-      margin-top: myrem(5);
-    }
+  max-width: myrem(500);
+  margin-inline: auto;
+  margin-top: myrem(28);
+  @include mq(md) {
+    min-width: myrem(800);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(myrem(180), 1fr));
+    gap: myrem(26);
+    margin-inline: myrem(24) 0;
+    margin-top: myrem(5);
+  }
 }
 
 .p-flow__card03 {
