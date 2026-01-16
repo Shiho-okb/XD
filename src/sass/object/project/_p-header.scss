@@ -129,7 +129,7 @@
     min-height: initial;
     overflow: initial;
     flex-direction: row;
-    max-width: $innerWidth + $padding-pc * 2;
+    max-width: 100%;
   }
 }
 
@@ -207,7 +207,6 @@
 -------------------------------------------*/
 .p-header-nav-item__accordion {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba($green2, 0.4);
   @include mq(md) {
@@ -236,12 +235,13 @@
   height: myrem(13);
   width: myrem(13);
   right: myrem(12);
+  top: 45%;
   transform: translateY(-50%) rotate(135deg);
   transition: transform .3s;
 }
 
 .p-header-nav-item__toggle.open::after {
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
 }
 
 

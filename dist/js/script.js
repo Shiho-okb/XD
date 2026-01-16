@@ -149,6 +149,7 @@ jQuery(function ($) {
         spaceBetween: -10,
       },
       1400: {
+        slidesPerView: 3.32,
         spaceBetween: -20,
       },
     },
