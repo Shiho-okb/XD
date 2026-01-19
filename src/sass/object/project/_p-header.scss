@@ -240,7 +240,8 @@
   transition: transform .3s;
 }
 
-.p-header-nav-item__toggle.open::after {
+.p-header-nav-item__accordion.open
+.p-header-nav-item__toggle::after {
   transform: translateY(0) rotate(-45deg);
 }
 
