@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .p-company {
-  padding-bottom: myrem(75);
+  padding-block: myrem(74) myrem(75);
   @include mq(md) {
-    padding-bottom: myrem(110);
+    padding-block: myrem(110) myrem(110);
   }
 }
 

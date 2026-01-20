@@ -1,5 +1,12 @@
 @use "global" as *;
 
+.p-flow {
+  padding-top: myrem(70);
+  @include mq(md) {
+    padding-top: myrem(110);
+  }
+}
+
 .p-flow__wrapper {
   @include mq(md) {
     display: flex;

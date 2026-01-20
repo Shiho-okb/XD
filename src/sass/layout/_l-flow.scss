@@ -1,8 +1,1 @@
 @use 'global' as *;
-
-.l-flow {
-  padding-top: myrem(70);
-  @include mq(md) {
-    padding-top: myrem(110);
-  }
-}
